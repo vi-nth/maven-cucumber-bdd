@@ -28,7 +28,6 @@ public class Topic_06_Excercise {
 
 		} else {
 			System.out.println("Số:" + number + "là số lẻ");
-
 		}
 
 	}
@@ -43,7 +42,6 @@ public class Topic_06_Excercise {
 
 		} else {
 			System.out.println(numberA + "nhỏ hơn" + numberB);
-
 		}
 
 	}
@@ -75,7 +73,7 @@ public class Topic_06_Excercise {
 
 	}
 
-	//@Test
+	// @Test
 	public void TC_04() {
 
 		int numberA = scanner.nextInt();
@@ -95,7 +93,7 @@ public class Topic_06_Excercise {
 
 	}
 
-	//@Test
+	// @Test
 	public void TC_05() {
 
 		int numberA = scanner.nextInt();
@@ -107,40 +105,41 @@ public class Topic_06_Excercise {
 
 		}
 	}
-	
-	//@Test
+
+	// @Test
 	public void TC_06() {
 		float studentPoint = scanner.nextFloat();
-		if (8.5<=studentPoint&& studentPoint<= 10) {
+		if (8.5 <= studentPoint && studentPoint <= 10) {
 			System.out.println("Hệ số A");
-		} else if (7.5<=studentPoint&& studentPoint<= 8.5) {
+		} else if (7.5 <= studentPoint && studentPoint <= 8.5) {
 			System.out.println("Hệ số B");
-			
-		} else if (5<=studentPoint&& studentPoint<= 7.5) {
+
+		} else if (5 <= studentPoint && studentPoint <= 7.5) {
 			System.out.println("Hệ số C");
-			
-		} else if (0<=studentPoint&& studentPoint<=5) {
+
+		} else if (0 <= studentPoint && studentPoint <= 5) {
 			System.out.println("Hệ số D");
 		} else {
 			System.out.println("Bạn vui lòng nhập điểm lại");
 
 		}
-		
+
 	}
+
 	@Test
-		public void TC_07() {
+	public void TC_07() {
 		int month = scanner.nextInt();
-		if (month==1 ||month==3 ||month==5 ||month==7 ||month==8 ||month==110 ||month==12 ) {
+		if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 110 || month == 12) {
 			System.out.println("Tháng này có 31 ngày");
-			
-		} else if (month==2) {
+
+		} else if (month == 2) {
 			System.out.println("Tháng này có 28 ngày");
-			
+
 		} else {
 			System.out.println("Tháng này có 30 ngày");
 
 		}
-		
+
 	}
 
 }
