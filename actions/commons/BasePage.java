@@ -19,6 +19,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 // Common class
 public class BasePage {
+	
+	public static BasePage getBasePageObject() {
+		return new BasePage();
+	}
 
 	// Nhiem vu mow 1 Url bat ky ra
 	// Common funtion
@@ -119,17 +123,17 @@ public class BasePage {
 	}
 
 	// Ham tuong tac voi element
-	public By getByXpath(String xpathLocator) {
+	private By getByXpath(String xpathLocator) {
 		return By.xpath(xpathLocator);
 
 	}
 
-	public WebElement getWebElement(WebDriver driver, String xpathLocator) {
+	private WebElement getWebElement(WebDriver driver, String xpathLocator) {
 		// Loi goi ham: call a funtion
 		return driver.findElement(getByXpath(xpathLocator));
 	}
 
-	public List<WebElement> getListWebElement(WebDriver driver, String xpathLocator) {
+	private List<WebElement> getListWebElement(WebDriver driver, String xpathLocator) {
 		return driver.findElements(getByXpath(xpathLocator));
 	}
 
