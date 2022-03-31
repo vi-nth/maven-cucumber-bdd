@@ -60,7 +60,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 		Assert.assertEquals(registerPage.getErrorMessageAtConfirmPasswordTextbox(), "Password is required.");
 	}
 
-	// @Test
+	@Test
 	public void Register_02_Invalid_Email() {
 		System.out.println("Home Page - Step 01: Click to Register Button");
 		homePage.clickToRegisterLink();
@@ -82,7 +82,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 
 	}
 
-	// @Test
+	@Test
 	public void Register_03_Success() {
 		System.out.println("Home Page - Step 01: Click to Register Button");
 		homePage.clickToRegisterLink();
@@ -107,7 +107,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 
 	}
 
-	// @Test
+	@Test
 	public void Register_04_Existing_Email() {
 		System.out.println("Home Page - Step 01: Click to Register Button");
 		homePage.clickToRegisterLink();
@@ -128,7 +128,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 		Assert.assertEquals(registerPage.getErrorExistingEmailMessage(), "The specified email already exists");
 	}
 
-	// @Test
+	@Test
 	public void Register_05_Password_Less_Then_6_Characters() {
 		System.out.println("Home Page - Step 01: Click to Register Button");
 		homePage.clickToRegisterLink();
@@ -150,7 +150,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 				"Password must meet the following rules:\nmust have at least 6 characters");
 	}
 
-	// @Test
+	@Test
 	public void Register_06_Invalid_Confirm_Password() {
 		System.out.println("Home Page - Step 01: Click to Register Button");
 		homePage.clickToRegisterLink();
