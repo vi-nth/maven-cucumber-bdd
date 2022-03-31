@@ -43,18 +43,18 @@ public class Level_03_Page_Object_02_Login {
 		homePage.clickToRegisterLink();
 		registerPage = new RegisterPageObject(driver);
 
-		System.out.println("Pre-condition - STEP 2: Input to required fields");
-		registerPage.inputToFirstnameTextbox(firstName);
+		System.out.println("Register Page - STEP 2: Input to required fields");
+		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
 		registerPage.inputToEmailTextbox(validEmail);
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(password);
-
-		System.out.println("Pre-condition - STEP 3: Click to Register Button");
+		
+		System.out.println("Register Page - STEP 3: Click to Register Button");
 		registerPage.clickToRegisterButton();
-
-		System.out.println("Pre-condition - STEP 4: Verify success messsage displayed");
-		Assert.assertEquals(registerPage.getSuccessMessageAtEmailTextbox(), "Your registration completed");
+	
+		System.out.println("Register Page - STEP 4: Verify success messsage displayed");
+		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
 		System.out.println("Pre-condition - STEP 5: Click to Logout Button");
 		registerPage.clickToLogoutLink();
