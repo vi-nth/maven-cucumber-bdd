@@ -31,9 +31,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 
 		driver= getBrowserDriver(browserName);
 
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		homePage = new HomePageObject(driver);
-		driver.get("https://demo.nopcommerce.com/");
 		firstName = "Automation";
 		lastName = "FC";
 		emailAddress = "afc" + generateFakeNumber() + "@gmail.us";
