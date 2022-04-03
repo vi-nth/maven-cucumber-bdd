@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.CacheLookup;
 
 import commons.BasePage;
 import pageUIs.RegisterPageUI;
@@ -18,27 +19,27 @@ public class RegisterPageObject extends BasePage{
 	}
 
 	public void inputToLastNameTextbox(String lastName) {
-		waitForAllElementVisible(driver, RegisterPageUI.LASTNAME_TEXTBOX);
+		waitForElementVisible(driver, RegisterPageUI.LASTNAME_TEXTBOX);
 		sendkeyToElement(driver, RegisterPageUI.LASTNAME_TEXTBOX, lastName);
 		
 	}
 
 	public void inputToEmailTextbox(String emailAddress) {
-		waitForAllElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
+		waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
 		sendkeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, emailAddress);
 	}
 
 	public void inputToPasswordTextbox(String password) {
-		waitForAllElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX);
+		waitForElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX);
 		sendkeyToElement(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);
 	}
 
 	public void inputToConfirmPasswordTextbox(String confirmPassword) {
-		waitForAllElementVisible(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX);
+		waitForElementVisible(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX);
 		sendkeyToElement(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX, confirmPassword);
 		
 	}
-
+	
 	public void clickToRegisterButton() {
 		waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
 		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
