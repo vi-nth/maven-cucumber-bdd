@@ -5,21 +5,21 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.BrowserType;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import commons.BasePage;
 import commons.BaseTest;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.RegisterPageObject;
 
-public class Level_05_Page_Factory extends BaseTest {
+public class Level_06_Page_Generator_Manager_I extends BaseTest {
 	private WebDriver driver;
-	
+	private String projectPath = System.getProperty("user.dir");
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
@@ -32,6 +32,9 @@ public class Level_05_Page_Factory extends BaseTest {
 
 		homePage = new HomePageObject(driver);
 		registerPage = new RegisterPageObject(driver);
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get("https://demo.nopcommerce.com/");
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -60,6 +63,9 @@ public class Level_05_Page_Factory extends BaseTest {
 
 		System.out.println("Pre-condition - STEP 5: Click to Logout Button");
 		registerPage.clickToLogoutLink();
+
+		// Click logout sẽ quay về trang Home --> khởi tạo lên (Chuyển trang là khởi
+		// tạo)
 	}
 
 	@Test

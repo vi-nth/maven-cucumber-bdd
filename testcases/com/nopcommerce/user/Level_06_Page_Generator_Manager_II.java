@@ -5,21 +5,22 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.BrowserType;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import commons.BasePage;
 import commons.BaseTest;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
+import pageObjects.PageGeneratorManager;
 import pageObjects.RegisterPageObject;
 
-public class Level_05_Page_Factory extends BaseTest {
+public class Level_06_Page_Generator_Manager_II extends BaseTest {
 	private WebDriver driver;
-	
+	private String projectPath = System.getProperty("user.dir");
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
@@ -29,9 +30,10 @@ public class Level_05_Page_Factory extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-
+// 1
 		homePage = new HomePageObject(driver);
-		registerPage = new RegisterPageObject(driver);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get("https://demo.nopcommerce.com/");
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -40,10 +42,9 @@ public class Level_05_Page_Factory extends BaseTest {
 		incorrectPassword = "654321";
 		invalidEmail = "automation@fc@gmail.us";
 		notFoundEmail = "afc" + generateFakeNumber() + "@gmail.uk";
-
+//2
 		System.out.println("Pre-condition- Step 01: Click to Register Button");
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		registerPage = homePage.clickToRegisterLink();
 
 		System.out.println("Register Page - STEP 2: Input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -59,14 +60,15 @@ public class Level_05_Page_Factory extends BaseTest {
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
 		System.out.println("Pre-condition - STEP 5: Click to Logout Button");
-		registerPage.clickToLogoutLink();
+		homePage = registerPage.clickToLogoutLink();
+
+		// Click logout sẽ quay về trang Home --> khởi tạo lên (Chuyển trang là khởi
+		// tạo)
 	}
 
 	@Test
 	public void Login_01_Emty_Data() {
-		homePage.clickToLoginLink();
-
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginLink();
 
 		loginPage.clickToLoginButton();
 
@@ -75,26 +77,19 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Login_02_Invalid_Email() {
-		homePage.clickToLoginLink();
-
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginLink();
 
 		loginPage.inputToEmailTexttbox(invalidEmail);
-
 		loginPage.clickToLoginButton();
 
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email");
-
 	}
 
 	@Test
 	public void Login_03_Email_Not_Found() {
-		homePage.clickToLoginLink();
-
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginLink();
 
 		loginPage.inputToEmailTexttbox(notFoundEmail);
-
 		loginPage.clickToLoginButton();
 
 		Assert.assertEquals(loginPage.getErrorMessageUnsuccessfull(),
@@ -104,9 +99,7 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Login_04_Existing_Email_Blank_Password() {
-		homePage.clickToLoginLink();
-
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginLink();
 
 		loginPage.inputToEmailTexttbox(validEmail);
 		loginPage.inputToPasswordTextbox(incorrectPassword);
@@ -120,9 +113,7 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Login_05_Existing_Email_Incorrect_Password() {
-		homePage.clickToLoginLink();
-
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginLink();
 
 		loginPage.inputToEmailTexttbox(validEmail);
 		loginPage.inputToPasswordTextbox(incorrectPassword);
@@ -136,16 +127,12 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Register_06_Valid_Email_And_Password() {
-		homePage.clickToLoginLink();
-
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginLink();
 
 		loginPage.inputToEmailTexttbox(validEmail);
 		loginPage.inputToPasswordTextbox(password);
 
-		loginPage.clickToLoginButton();
-
-		homePage = new HomePageObject(driver);
+		homePage = loginPage.clickToLoginButton();
 
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 
