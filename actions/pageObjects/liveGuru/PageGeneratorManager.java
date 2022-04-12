@@ -26,5 +26,4 @@ public class PageGeneratorManager extends BasePage {
 	public static MyDashboardPageObject getMyDashboardPage(WebDriver driver) {
 		return new MyDashboardPageObject(driver);
 	}
-
 }

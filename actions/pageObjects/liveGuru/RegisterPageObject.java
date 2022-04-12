@@ -48,5 +48,4 @@ public class RegisterPageObject extends BasePage{
 		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
 		return PageGeneratorManager.getMyDashboardPage(driver);
 	}
-
 }

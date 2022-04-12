@@ -55,7 +55,6 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		myDashboardPage.clickOnAccountMenu();
 
 		homePage = myDashboardPage.clickToLogoutLink();
-
 	}
 
 	@Test
@@ -69,7 +68,6 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		myDashboardPage = loginPage.clickOnLoginButton();
 		
 		Assert.assertTrue(myDashboardPage.isMyDashboardDisplayed());
-		
 
 	}
 

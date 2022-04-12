@@ -28,5 +28,4 @@ public class MyDashboardPageObject extends BasePage{
 		waitForAllElementVisible(driver, MyDashboardPageUI.MY_DASHBOARD_TEXT);
 		return isElementDisplayed(driver, MyDashboardPageUI.MY_DASHBOARD_TEXT);
 	}
-
 }
