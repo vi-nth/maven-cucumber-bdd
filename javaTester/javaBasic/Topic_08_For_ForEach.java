@@ -15,7 +15,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pageObjects.LoginPageObject;
+import pageObjects.nopCommerce.LoginPageObject;
 
 public class Topic_08_For_ForEach {
 

@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import commons.BasePage;
 import commons.BasePageFactory;
-import pageUIs.HomePageUI;
-import pageUIs.LoginPageUI;
+import pageUIs.nopCommerce.HomePageUI;
+import pageUIs.nopCommerce.LoginPageUI;
 
 public class LoginPageObject extends BasePageFactory {
 
