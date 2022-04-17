@@ -13,16 +13,16 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_05_Page_Factory extends BaseTest {
 	private WebDriver driver;
 	
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
 	private String validEmail, invalidEmail, notFoundEmail, firstName, lastName, password, incorrectPassword;
 
 	@Parameters("browser")
@@ -30,8 +30,8 @@ public class Level_05_Page_Factory extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 
-		homePage = new HomePageObject(driver);
-		registerPage = new RegisterPageObject(driver);
+		homePage = new UserHomePageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -43,7 +43,7 @@ public class Level_05_Page_Factory extends BaseTest {
 
 		System.out.println("Pre-condition- Step 01: Click to Register Button");
 		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 
 		System.out.println("Register Page - STEP 2: Input to required fields");
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -64,9 +64,9 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Login_01_Emty_Data() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.clickToLoginButton();
 
@@ -75,9 +75,9 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Login_02_Invalid_Email() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTexttbox(invalidEmail);
 
@@ -89,9 +89,9 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Login_03_Email_Not_Found() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTexttbox(notFoundEmail);
 
@@ -104,9 +104,9 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Login_04_Existing_Email_Blank_Password() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTexttbox(validEmail);
 		loginPage.inputToPasswordTextbox(incorrectPassword);
@@ -120,9 +120,9 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Login_05_Existing_Email_Incorrect_Password() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTexttbox(validEmail);
 		loginPage.inputToPasswordTextbox(incorrectPassword);
@@ -136,16 +136,16 @@ public class Level_05_Page_Factory extends BaseTest {
 
 	@Test
 	public void Register_06_Valid_Email_And_Password() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 
 		loginPage.inputToEmailTexttbox(validEmail);
 		loginPage.inputToPasswordTextbox(password);
 
 		loginPage.clickToLoginButton();
 
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 

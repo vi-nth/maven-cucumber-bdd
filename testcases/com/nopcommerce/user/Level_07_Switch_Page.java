@@ -13,26 +13,25 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
-import pageObjects.nopCommerce.AddressPageObject;
-import pageObjects.nopCommerce.CustomerInforPageObject;
-import pageObjects.nopCommerce.CustomerInforPageObject;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.MyProductReviewPageObject;
-import pageObjects.nopCommerce.PageGeneratorManager;
-import pageObjects.nopCommerce.RegisterPageObject;
-import pageObjects.nopCommerce.RewardPointPageObject;
+import commons.PageGeneratorManager;
+import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
+import pageObjects.nopCommerce.user.UserRewardPointPageObject;
+import pageObjects.nopCommerce.user.UserAddressPageObject;
 
 public class Level_07_Switch_Page extends BaseTest {
 	private WebDriver driver;
 	private String projectPath = System.getProperty("user.dir");
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInforPageObject customerInforPage;
-	private AddressPageObject addressPage;
-	private MyProductReviewPageObject myProductReviewPage;
-	private RewardPointPageObject rewardPointPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
+	private UserCustomerInforPageObject customerInforPage;
+	private UserAddressPageObject addressPage;
+	private UserMyProductReviewPageObject myProductReviewPage;
+	private UserRewardPointPageObject rewardPointPage;
 
 	private String emailAddress, invalidEmail, firstName, lastName, password, incorrectPassword;
 
@@ -40,8 +39,7 @@ public class Level_07_Switch_Page extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		homePage = PageGeneratorManager.getHomePage(driver);
-
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 		firstName = "Automation";
 		lastName = "FC";
 		emailAddress = "afc" + generateFakeNumber() + "@gmail.us";
@@ -54,6 +52,7 @@ public class Level_07_Switch_Page extends BaseTest {
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
 		registerPage.inputToEmailTextbox(emailAddress);
+		System.out.println(emailAddress);
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(password);
 		registerPage.clickToRegisterButton();
@@ -63,7 +62,7 @@ public class Level_07_Switch_Page extends BaseTest {
 
 	@Test
 	public void User_02_Login() {
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 
 		loginPage.inputToEmailTexttbox(emailAddress);
 		loginPage.inputToPasswordTextbox(password);
@@ -74,7 +73,7 @@ public class Level_07_Switch_Page extends BaseTest {
 
 	@Test
 	public void User_03_Customer_Infor() {
-		customerInforPage = homePage.clickToMyAccountLink();
+		customerInforPage = homePage.openMyAccountLink();
 		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
 
 	}

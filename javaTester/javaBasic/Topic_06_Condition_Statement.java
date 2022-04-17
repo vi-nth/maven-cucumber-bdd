@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pageObjects.nopCommerce.LoginPageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
 
 public class Topic_06_Condition_Statement {
 

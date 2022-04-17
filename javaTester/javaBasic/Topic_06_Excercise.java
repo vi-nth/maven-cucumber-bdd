@@ -6,7 +6,7 @@ import java.util.Scanner;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import pageObjects.nopCommerce.LoginPageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
 
 public class Topic_06_Excercise {
 

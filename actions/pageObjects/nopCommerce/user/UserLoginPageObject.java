@@ -1,35 +1,36 @@
-package pageObjects.nopCommerce;
+package pageObjects.nopCommerce.user;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.nopCommerce.LoginPageUI;
+import commons.PageGeneratorManager;
+import pageUIs.nopCommerce.user.LoginPageUI;
 
-public class LoginPageObject extends BasePage {
+public class UserLoginPageObject extends BasePage {
 
 	private WebDriver driver;
 	public Object clickToLoginButton;
 
-	public LoginPageObject(WebDriver driver) {
+	public UserLoginPageObject(WebDriver driver) {
 
 		this.driver = driver;
 	}
 
-	public HomePageObject clickToLoginButton() {
+	public UserHomePageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
-		return PageGeneratorManager.getHomePage(driver);
+		return PageGeneratorManager.getUserHomePage(driver);
 	}
 
 	public String getErrorMessageAtEmailTextbox() {
-	waitForElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
-	return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+		waitForElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+		return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
 
 	}
 
-	public void inputToEmailTexttbox(String invalidEmail) {
+	public void inputToEmailTexttbox(String emailAddress) {
 		waitForElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, invalidEmail);
+		sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
 	}
 
 	public String getErrorMessageUnsuccessfull() {
@@ -40,6 +41,13 @@ public class LoginPageObject extends BasePage {
 	public void inputToPasswordTextbox(String password) {
 		waitForElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
 		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
+
+	}
+
+	public UserHomePageObject loginAsUser(String emailAddress, String password) {
+		inputToEmailTexttbox(emailAddress);
+		inputToPasswordTextbox(password);
+		return clickToLoginButton();
 
 	}
 
