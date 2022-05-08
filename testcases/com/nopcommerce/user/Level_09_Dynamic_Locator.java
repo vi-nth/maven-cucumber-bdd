@@ -117,9 +117,6 @@ public class Level_09_Dynamic_Locator extends BaseTest {
 	public void afterClass() {
 	}
 
-	public int generateFakeNumber() {
-		Random random = new Random();
-		return random.nextInt(9999);
-	}
+
 
 }

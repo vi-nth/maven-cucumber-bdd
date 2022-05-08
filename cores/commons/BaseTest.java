@@ -1,5 +1,6 @@
 package commons;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -45,7 +46,11 @@ public class BaseTest {
 			// Cococ browser trừ đi 5-6 version
 			WebDriverManager.chromedriver().driverVersion("99.0.4844.51").setup();
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
+			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
+				options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
+			} else {
+				options.setBinary("");
+			}
 			driver = new ChromeDriver(options);
 			
 		} else if (browserName.equals("brave")) {
@@ -65,10 +70,19 @@ public class BaseTest {
 		} else {
 			throw new RuntimeException ("Browser name invalid");
 		}
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get(GlobalConstants.PORTAL_PAGE_URL);
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.get(GlobalConstants.JQUREY_PAGE_URL);
 		return driver;
 	}
 	
+	private String getEnvironmentUrl(String severName) {
+		return severName;
+		
+	}
+	
+	public int generateFakeNumber() {
+		Random random = new Random();
+		return random.nextInt(9999);
+	}
 
 }
