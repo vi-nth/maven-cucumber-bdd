@@ -24,7 +24,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 
-	@Parameters("browser")
+	@Parameters({"browser"})
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		System.out.println("Run on" + browserName);
