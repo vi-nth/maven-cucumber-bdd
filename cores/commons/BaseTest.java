@@ -165,6 +165,15 @@ public class BaseTest {
 		Random random = new Random();
 		return random.nextInt(9999);
 	}
+	
+
+	public void sleepInSecond(long timeoutInSecond) {
+		try {
+			Thread.sleep(timeoutInSecond * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 	protected boolean verifyTrue(boolean condition) {
 		boolean pass = true;
