@@ -1,0 +1,260 @@
+[2022-06-04 23:20:12,382] Register - Step 01: Navigate to Register Page
+[2022-06-04 23:20:13,357] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[2022-06-04 23:20:13,618] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[2022-06-04 23:20:13,788] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc9348@gmail.us
+[2022-06-04 23:20:14,081] Register - Step 05: Enter to Password Textbox with value is '123456
+[2022-06-04 23:20:14,257] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[2022-06-04 23:20:14,417] Register - Step 07: Click To Register Button
+[2022-06-04 23:20:15,569] Register - Step 08: Verify Register successful Message is displayed
+[2022-06-04 23:20:15,680] Register - Step 09: Click To Logout Link
+[2022-06-04 23:20:16,657] Login - Step 01: Navigate To Login Page
+[2022-06-04 23:20:17,457] Login - Step 02: Enter to emailAddress Textbox with value is 'afc9348@gmail.us
+[2022-06-04 23:20:17,603] Login - Step 03: Enter to Password Textbox with value is '123456
+[2022-06-04 23:20:17,752] Login - Step 04: Click To Login Button
+[2022-06-04 23:20:18,705] Login - Step 05: Verify 'My Account' Link is Displayed
+[2022-06-04 23:20:18,824] Login - Step 06: Navigate To 'My Account' Page
+[2022-06-04 23:20:19,715] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-04 23:29:37,675] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-04 23:29:38,588] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-04 23:29:38,818] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-04 23:29:38,950] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc5865@gmail.us
+[INFO ] [2022-06-04 23:29:39,090] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:29:39,219] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:29:39,345] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-04 23:29:40,366] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-04 23:29:40,477] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-04 23:29:41,409] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-04 23:29:42,204] Login - Step 02: Enter to emailAddress Textbox with value is 'afc5865@gmail.us
+[INFO ] [2022-06-04 23:29:42,355] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:29:42,486] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-04 23:29:43,652] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-04 23:29:43,804] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-04 23:29:44,537] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-04 23:31:42,030] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-04 23:31:43,126] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-04 23:31:43,382] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-04 23:31:43,543] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc5162@gmail.us
+[INFO ] [2022-06-04 23:31:43,675] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:31:43,803] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:31:43,921] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-04 23:31:44,973] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-04 23:31:45,070]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:31:45,072] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-04 23:31:46,349] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-04 23:31:47,129] Login - Step 02: Enter to emailAddress Textbox with value is 'afc5162@gmail.us
+[INFO ] [2022-06-04 23:31:47,251] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:31:47,370] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-04 23:31:48,318] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-04 23:31:48,432]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:31:48,433] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-04 23:31:49,117] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-04 23:31:49,231]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:36:03,140] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-04 23:36:04,625] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-04 23:36:04,915] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-04 23:36:05,213] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc9783@gmail.us
+[INFO ] [2022-06-04 23:36:05,586] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:36:05,710] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:36:05,864] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-04 23:36:07,246] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-04 23:36:07,400]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:36:07,402] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-04 23:36:08,546] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-04 23:36:09,294] Login - Step 02: Enter to emailAddress Textbox with value is 'afc9783@gmail.us
+[INFO ] [2022-06-04 23:36:09,442] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:36:09,596] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-04 23:36:10,716] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-04 23:36:10,910]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:36:10,910] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-04 23:36:11,625] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-04 23:36:11,791]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:51:00,662] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-04 23:51:01,727] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-04 23:51:02,059] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-04 23:51:02,208] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc8010@gmail.us
+[INFO ] [2022-06-04 23:51:02,369] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:51:02,484] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:51:02,650] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-04 23:51:03,673] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-04 23:51:03,790]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:51:03,792] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-04 23:51:04,753] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-04 23:51:05,494] Login - Step 02: Enter to emailAddress Textbox with value is 'afc8010@gmail.us
+[INFO ] [2022-06-04 23:51:05,618] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:51:05,724] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-04 23:51:06,638] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-04 23:51:06,762]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:51:06,762] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-04 23:51:07,410] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-04 23:51:07,523]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:56:56,356] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-04 23:56:57,235] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-04 23:56:57,450] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-04 23:56:57,667] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc7765@gmail.us
+[INFO ] [2022-06-04 23:56:57,863] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:56:58,013] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:56:58,173] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-04 23:56:59,199] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-04 23:56:59,290]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:56:59,292] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-04 23:57:00,242] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-04 23:57:01,050] Login - Step 02: Enter to emailAddress Textbox with value is 'afc7765@gmail.us
+[INFO ] [2022-06-04 23:57:01,214] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:57:01,397] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-04 23:57:02,367] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-04 23:57:02,524]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:57:02,524] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-04 23:57:03,283] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-04 23:57:03,395]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:58:36,772] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-04 23:58:37,696] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-04 23:58:37,896] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-04 23:58:38,040] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc615@gmail.us
+[INFO ] [2022-06-04 23:58:38,215] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:58:38,334] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:58:38,455] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-04 23:58:39,537] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-04 23:58:39,630]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:58:39,631] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-04 23:58:40,541] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-04 23:58:41,272] Login - Step 02: Enter to emailAddress Textbox with value is 'afc615@gmail.us
+[INFO ] [2022-06-04 23:58:41,409] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-04 23:58:41,532] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-04 23:58:42,499] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-04 23:58:42,610]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-04 23:58:42,610] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-04 23:58:43,314] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-04 23:58:43,455]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:04:49,263] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-05 00:04:50,340] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-05 00:04:50,498] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-05 00:04:50,708] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc1586@gmail.us
+[INFO ] [2022-06-05 00:04:50,878] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:04:51,021] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:04:51,193] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-05 00:04:52,274] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-05 00:04:52,391]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:04:52,401] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-05 00:04:53,393] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-05 00:04:54,313] Login - Step 02: Enter to emailAddress Textbox with value is 'afc1586@gmail.us
+[INFO ] [2022-06-05 00:04:54,476] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:04:54,657] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-05 00:04:55,827] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-05 00:04:56,021]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:04:56,022] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-05 00:04:56,740] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-05 00:04:56,924]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:25:10,332] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-05 00:25:11,300] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-05 00:25:11,474] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-05 00:25:11,690] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc8192@gmail.us
+[INFO ] [2022-06-05 00:25:11,869] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:25:12,043] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:25:12,204] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-05 00:25:13,230] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-05 00:25:13,352]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:25:13,360] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-05 00:25:14,358] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-05 00:25:15,178] Login - Step 02: Enter to emailAddress Textbox with value is 'afc8192@gmail.us
+[INFO ] [2022-06-05 00:25:15,306] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:25:15,427] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-05 00:25:16,363] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-05 00:25:16,512]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:25:16,513] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-05 00:25:17,257] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-05 00:25:17,384]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:25:29,390] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-05 00:25:30,327] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-05 00:25:30,528] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-05 00:25:30,713] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc7633@gmail.us
+[INFO ] [2022-06-05 00:25:30,869] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:25:31,021] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:25:31,143] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-05 00:25:32,174] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-05 00:25:32,263]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:25:32,263] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-05 00:25:33,174] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-05 00:25:33,987] Login - Step 02: Enter to emailAddress Textbox with value is 'afc7633@gmail.us
+[INFO ] [2022-06-05 00:25:34,114] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:25:34,231] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-05 00:25:35,197] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-05 00:25:35,316]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:25:35,316] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-05 00:25:35,996] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-05 00:25:36,152]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:28:04,488] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-05 00:28:05,374] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-05 00:28:05,629] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-05 00:28:05,769] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc4326@gmail.us
+[INFO ] [2022-06-05 00:28:05,950] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:28:06,044] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:28:06,183] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-05 00:28:07,219] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-05 00:28:07,312]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:28:07,313] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-05 00:28:08,213] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-05 00:28:09,006] Login - Step 02: Enter to emailAddress Textbox with value is 'afc4326@gmail.us
+[INFO ] [2022-06-05 00:28:09,184] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:28:09,295] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-05 00:28:10,325] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-05 00:28:10,484]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:28:10,485] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-05 00:28:11,260] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-05 00:28:11,413]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:28:22,723] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-05 00:28:23,830] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-05 00:28:24,050] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-05 00:28:24,250] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc3467@gmail.us
+[INFO ] [2022-06-05 00:28:24,402] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:28:24,516] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:28:24,619] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-05 00:28:25,648] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-05 00:28:25,753]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:28:25,753] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-05 00:28:26,903] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-05 00:28:27,612] Login - Step 02: Enter to emailAddress Textbox with value is 'afc3467@gmail.us
+[INFO ] [2022-06-05 00:28:27,712] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:28:27,799] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-05 00:28:29,198] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-05 00:28:29,288]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:28:29,289] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-05 00:28:30,130] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-05 00:28:30,279]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:30:58,323] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-05 00:30:59,280] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-05 00:30:59,547] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-05 00:30:59,673] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc346@gmail.us
+[INFO ] [2022-06-05 00:30:59,841] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:31:00,031] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:31:00,173] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-05 00:31:01,223] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-05 00:31:01,344]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:31:01,346] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-05 00:31:02,248] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-05 00:31:03,052] Login - Step 02: Enter to emailAddress Textbox with value is 'afc346@gmail.us
+[INFO ] [2022-06-05 00:31:03,206] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:31:03,350] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-05 00:31:04,244] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-05 00:31:04,373]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:31:04,374] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-05 00:31:05,041] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-05 00:31:05,163]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:31:17,181] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-05 00:31:18,074] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-05 00:31:18,262] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-05 00:31:18,421] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc9372@gmail.us
+[INFO ] [2022-06-05 00:31:18,582] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:31:18,677] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:31:18,845] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-05 00:31:19,939] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-05 00:31:20,029]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:31:20,029] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-05 00:31:20,942] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-05 00:31:21,709] Login - Step 02: Enter to emailAddress Textbox with value is 'afc9372@gmail.us
+[INFO ] [2022-06-05 00:31:21,820] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-05 00:31:21,915] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-05 00:31:22,865] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-05 00:31:22,964]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-05 00:31:22,964] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-05 00:31:23,636] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-05 00:31:23,754]  -------------------------- FAILED -------------------------- 
