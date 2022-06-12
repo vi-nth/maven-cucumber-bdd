@@ -21,19 +21,14 @@ public class BaseTest {
 	private WebDriver driver;
 	private String projectPath = System.getProperty("user.dir");
 	protected final Log log;
+
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
 	}
 
-//	protected WebDriver getBrowserDriverID (String browserName) {
-//		return getBrowserDriver(browserName);
-//		
-//	}
 	protected WebDriver getBrowserDriver(String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		if (browserList == BrowserList.FIREFOX) {
-			// System.setProperty("webdriver.gecko.driver", projectPath +
-			// "\\browserDrivers\\geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (browserList == BrowserList.HEAD_FIREFOX) {
@@ -88,6 +83,10 @@ public class BaseTest {
 		driver.get(GlobalConstants.PORTAL_PAGE_URL);
 		// driver.get(getEnvironmentUrl(environmentName));
 		return driver;
+	}
+
+	public WebDriver getDriverInstance() {
+		return this.driver;
 	}
 
 	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
@@ -171,7 +170,6 @@ public class BaseTest {
 		Random random = new Random();
 		return random.nextInt(9999);
 	}
-	
 
 	public void sleepInSecond(long timeoutInSecond) {
 		try {

@@ -24,10 +24,10 @@ public class Level_11_Upload_File extends BaseTest {
 	String rubyFileName = "Ruby.png";
 	String[] multipleFileNames = { csharpFileName, javaFileName, pythonFileName, rubyFileName };
 
-	@Parameters("browser")
+	@Parameters({"browser", "url"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+	public void beforeClass(String browserName, String appUrl) {
+		driver = getBrowserDriver(browserName, appUrl);
 		homePage = PageGeneratorManager.getHomePage(driver);
 
 	}
