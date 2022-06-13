@@ -17,7 +17,7 @@ import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 
-public class Level_15_EntentV3_Screenshot extends BaseTest {
+public class Level_15_EntentV4 extends BaseTest {
 	private WebDriver driver;
 
 	private UserHomePageObject homePage;
