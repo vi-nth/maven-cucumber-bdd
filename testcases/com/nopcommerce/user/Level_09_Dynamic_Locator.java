@@ -70,17 +70,17 @@ public class Level_09_Dynamic_Locator extends BaseTest {
 	@Test
 	public void User_02_Dynamic_Page() {
 
-		addressPage = customerInforPage.openAddressPage(driver);
+		addressPage = customerInforPage.openAddressPage();
 
-		myProductReviewPage = addressPage.openMyProductReviewPage(driver);
+		myProductReviewPage = addressPage.openMyProductReviewPage();
 
-		rewardPointPage = myProductReviewPage.openRewardPointPage(driver);
+		rewardPointPage = myProductReviewPage.openRewardPointPage();
 
-		addressPage = rewardPointPage.openAddressPage(driver);
+		addressPage = rewardPointPage.openAddressPage();
 
-		rewardPointPage = addressPage.openRewardPointPage(driver);
+		rewardPointPage = addressPage.openRewardPointPage();
 
-		myProductReviewPage = rewardPointPage.openMyProductReviewPage(driver);
+		myProductReviewPage = rewardPointPage.openMyProductReviewPage();
 
 
 	}

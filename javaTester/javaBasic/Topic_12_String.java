@@ -107,7 +107,7 @@ public class Topic_12_String {
 		// isEmpty/ isBlank
 		helloWorld = "  ";
 		System.out.println(helloWorld.isEmpty());
-		System.out.println(helloWorld.isBlank());
+//		System.out.println(helloWorld.isBlank());
 		
 		// Dynamic locator
 		// Dai dien cho 1 chuoi: %s

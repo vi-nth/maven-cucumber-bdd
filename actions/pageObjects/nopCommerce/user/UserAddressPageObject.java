@@ -1,14 +1,13 @@
 package pageObjects.nopCommerce.user;
 
 import org.openqa.selenium.WebDriver;
+import pageObjects.navigation.SidebarAccountPageObject;
 
-import commons.BasePage;
-import pageUIs.nopCommerce.user.HomePageUI;
-
-public class UserAddressPageObject extends BasePage {
+public class UserAddressPageObject extends SidebarAccountPageObject {
 	private WebDriver driver;
 
 	public UserAddressPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 

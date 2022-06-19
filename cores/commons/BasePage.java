@@ -26,7 +26,8 @@ import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
 import pageUIs.jQuery.uploadFile.BasePageJQueryUI;
-import pageUIs.nopCommerce.user.BasePageUI;
+import pageUIs.navigation.BasePageUI;
+import pageObjects.navigation.FooterContainerPageObject;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
 
 // Common class
@@ -544,6 +545,11 @@ public class BasePage {
 		explicitWait.until(
 				ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
+	
+	public FooterContainerPageObject getFooterContainerPage(WebDriver driver) {
+		return new FooterContainerPageObject(driver);
+		
+	}
 
 	public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
 		// duong dan upload file
@@ -564,36 +570,12 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locatorType)));
 	}
 
-	public UserCustomerInforPageObject openCustomerInforPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.CUSTOMER_INFOR_LINK);
-		clickToElement(driver, BasePageUI.CUSTOMER_INFOR_LINK);
-		return PageGeneratorManager.getUserCustomerInforPage(driver);
-	}
-
-// Tối ưu ở bài Switch_Role
-	public UserAddressPageObject openAddressPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.ADDRESS_LINK);
-		clickToElement(driver, BasePageUI.ADDRESS_LINK);
-		return PageGeneratorManager.getUserAddressPage(driver);
-	}
-
-	public UserMyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
-		clickToElement(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
-		return PageGeneratorManager.getUserMyProductRviewPage(driver);
-	}
-
-	public UserRewardPointPageObject openRewardPointPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.REWARD_POINT_LINK);
-		clickToElement(driver, BasePageUI.REWARD_POINT_LINK);
-		return PageGeneratorManager.getUserRewardPointPage(driver);
-	}
-
 	public UserHomePageObject clickToLogoutatUser(WebDriver driver) {
 		waitForElementClickable(driver, BasePageUI.USER_LOGOUT_LINK);
 		clickToElement(driver, BasePageUI.USER_LOGOUT_LINK);
 		return PageGeneratorManager.getUserHomePage(driver);
 	}
+	
 	// Dynamic
 
 	public BasePage openPagesAtMyAccountPageName(WebDriver driver, String pageName) {
