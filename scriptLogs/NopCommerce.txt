@@ -1,0 +1,4 @@
+[INFO ] [2022-06-19 23:26:21,549] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-19 23:26:22,470] Login - Step 02: Enter to emailAddress Textbox with value is 'afc377@gmail.us
+[INFO ] [2022-06-19 23:26:22,668] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-19 23:26:22,845] Login - Step 04: Click To Login Button
