@@ -360,3 +360,60 @@
 [INFO ] [2022-06-19 23:26:22,470] Login - Step 02: Enter to emailAddress Textbox with value is 'afc377@gmail.us
 [INFO ] [2022-06-19 23:26:22,668] Login - Step 03: Enter to Password Textbox with value is '123456
 [INFO ] [2022-06-19 23:26:22,845] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-21 21:25:11,981] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-21 21:25:12,918] Login - Step 02: Enter to emailAddress Textbox with value is 'afc8819@gmail.us
+[INFO ] [2022-06-21 21:25:13,116] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-21 21:25:13,278] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-21 21:35:49,414] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-21 21:35:50,469] Login - Step 02: Enter to emailAddress Textbox with value is 'afc2602@gmail.us
+[INFO ] [2022-06-21 21:35:50,654] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-21 21:35:50,811] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-21 22:04:26,453] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:04:27,439] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2022-06-21 22:04:39,416] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 22:10:23,208] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-06-21 22:10:24,191] Register - Step 02: Enter to FirstName Textbox with value is 'Automation
+[INFO ] [2022-06-21 22:10:24,424] Register - Step 03: Enter to LastName Textbox with value is 'FC
+[INFO ] [2022-06-21 22:10:24,569] Register - Step 04: Enter to EmailAddress Textbox with value is 'afc5058@gmail.us
+[INFO ] [2022-06-21 22:10:24,732] Register - Step 05: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-21 22:10:24,885] Register - Step 06: Enter to Confirm Password Textbox with value is '123456
+[INFO ] [2022-06-21 22:10:25,047] Register - Step 07: Click To Register Button
+[INFO ] [2022-06-21 22:10:26,173] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-06-21 22:10:26,265]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-21 22:10:26,267] Register - Step 09: Click To Logout Link
+[INFO ] [2022-06-21 22:10:27,505] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-06-21 22:10:28,293] Login - Step 02: Enter to emailAddress Textbox with value is 'afc5058@gmail.us
+[INFO ] [2022-06-21 22:10:28,418] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-06-21 22:10:28,523] Login - Step 04: Click To Login Button
+[INFO ] [2022-06-21 22:10:29,578] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 22:10:29,726]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-21 22:10:29,727] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-06-21 22:10:30,497] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-06-21 22:10:30,627]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-06-21 22:17:27,989] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:17:30,220] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2022-06-21 22:18:45,512] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:18:46,681] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2022-06-21 22:18:58,010] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 22:20:22,397] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:20:23,281] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2022-06-21 22:20:34,658] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 22:25:41,742] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:25:42,643] Pre-condition - Step 2: Set cookie and Login page
+[INFO ] [2022-06-21 22:25:53,042] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 22:30:33,975] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:30:34,877] Pre-condition - Step 2: Set cookie and Login page
+[INFO ] [2022-06-21 22:30:44,754] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 22:38:41,696] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:38:42,683] Pre-condition - Step 2: Set cookie and Login page
+[INFO ] [2022-06-21 22:38:47,572] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 22:40:27,659] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:40:28,839] Pre-condition - Step 2: Set cookie and Login page
+[INFO ] [2022-06-21 22:40:33,241] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 22:54:11,384] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 22:54:12,483] Pre-condition - Step 2: Set cookie and Login page
+[INFO ] [2022-06-21 22:54:19,567] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 23:14:52,340] Pre-condition - Step 1: Navigate To Login Page
+[INFO ] [2022-06-21 23:14:53,536] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2022-06-21 23:15:00,263] Pre-condition - Step 03: Verify 'My Account' Link is Displayed
+[INFO ] [2022-06-21 23:15:00,929]  -------------------------- PASSED -------------------------- 
