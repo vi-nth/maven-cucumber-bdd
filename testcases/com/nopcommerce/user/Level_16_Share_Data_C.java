@@ -1,19 +1,21 @@
 package com.nopcommerce.user;
 
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 
 import com.nopcommerce.common.Common_01_Register;
+import com.nopcommerce.common.Common_01_Register_Cookies;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
-
-public class Level_16_Share_Data_A extends BaseTest {
+public class Level_16_Share_Data_C extends BaseTest {
 	private WebDriver driver;
 
 	private UserHomePageObject homePage;
@@ -26,20 +28,23 @@ public class Level_16_Share_Data_A extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
+
 		emailAddress = Common_01_Register.emailAddress;
 		password = Common_01_Register.password;
 
-		log.info("Login - Step 01: Navigate To Login Page");
+		log.info("Pre-condition - Step 1: Navigate To Login Page");
 		loginPage = homePage.openLoginPage();
 
-		log.info("Login - Step 02: Enter to emailAddress Textbox with value is '" + emailAddress + "");
-		loginPage.inputToEmailTexttbox(emailAddress);
+		log.info("Pre-condition - Step 2: Set cookie and reload page");
+		loginPage.setCookies(driver, Common_01_Register_Cookies.loggedCookies);
+		for (Cookie cookie : Common_01_Register_Cookies.loggedCookies) {
+			System.out.println("Cookies at C Class:" + cookie);
+		}
+		loginPage.refreshCurrentPage(driver);
 
-		log.info("Login - Step 03: Enter to Password Textbox with value is '" + password + "");
-		loginPage.inputToPasswordTextbox(password);
+		log.info("Pre-condition - Step 03: Verify 'My Account' Link is Displayed");
+		verifyTrue(homePage.isMyAccountLinkDisplayed());
 
-		log.info("Login - Step 04: Click To Login Button");
-		homePage = loginPage.clickToLoginButton();
 	}
 
 	@Test
@@ -74,7 +79,7 @@ public class Level_16_Share_Data_A extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
-		//driver.quit();
+		driver.quit();
 
 	}
 

@@ -63,12 +63,9 @@ public class Common_01_Register extends BaseTest{
 		
 		log.info("Register - Step 09: Click To Logout Link");
 		homePage = registerPage.clickToLogoutLink();
+		
+		driver.quit();
 	}
 	
-	@AfterTest
-	public void afterClass() {
-		driver.quit();
-		
-	}
 	
 }
