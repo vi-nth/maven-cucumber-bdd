@@ -16,4 +16,10 @@ public class HomePageUI {
 	public static final String ICON_NAME_BY_ROW_NUMBER = "xpath=//tbody/tr[%s]//button[@title='%s']";
 	
 	public static final String LOAD_BUTTON= "css=button#btnLoad";
+	
+	
+	
+	
+	
+	
 }
