@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce - User">
+<suite name="WordPress - User">
 
 	<listeners>
 			<listener class-name="commons.MethodListener"/>
@@ -8,12 +8,13 @@
 <!-- 			<listener class-name="org.uncommons.reportng.HTMLReporter" /> -->
 <!-- 			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> -->
 	</listeners>
+	 <parameter name = "url" value="https://test-xtdt-quangngai.vimap.vn/"/>
 	
 	<test name="Run on Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
 <!-- 			<class name="com.nopcommerce.common.Common_01_Register_Cookies" /> -->
-			<class name="com.nopcommerce.user.Level_14_Log_ReportNG" />
+			<class name="com.nopcommerce.user.Level_18_Pattern_Object" />
 		</classes>
 	</test>
 

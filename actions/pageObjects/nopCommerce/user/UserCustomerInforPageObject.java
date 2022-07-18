@@ -22,6 +22,7 @@ public class UserCustomerInforPageObject extends SidebarAccountPageObject{
 		return isElementDisplayed(driver, CustomerInforPageUI.CUSTOMER_INFOR_HEADER);
 	}
 
+	
 
 
 	

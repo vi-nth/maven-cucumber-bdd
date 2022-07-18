@@ -107,6 +107,13 @@ public class UserRegisterPageObject extends BasePage{
 		return null;
 	}
 
+	
+	
+
+	
+
+	
+	
 
 	
 }

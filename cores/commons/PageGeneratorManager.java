@@ -14,6 +14,7 @@ import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
 import pageObjects.nopCommerce.user.UserSearchTermPageObject;
+import pageObjects.wordpress.admin.UserHomePO;
 
 public class PageGeneratorManager {
 	public static UserHomePageObject getUserHomePage(WebDriver driver) {
@@ -63,6 +64,11 @@ public class PageGeneratorManager {
 	public static UserMyAccountPageObject getUserMyAccountPage(WebDriver driver) {
 		return new UserMyAccountPageObject(driver);
 		
+	}
+
+	public static UserHomePO getEndUserSite(WebDriver driver) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

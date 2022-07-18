@@ -36,5 +36,7 @@ public class AdminLoginPageObject extends BasePage {
 		return clickToLoginButton();
 	
 	}
+
+
 	
 }

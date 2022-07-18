@@ -1,0 +1,79 @@
+[INFO ] [2022-07-18 10:49:42,394] Pre-condition - Step 01: Open browser and Admin Url
+[INFO ] [2022-07-18 10:49:49,771] Pre-condition - Step 02: Enter in Username Textbox with value:automationfc
+[INFO ] [2022-07-18 10:49:50,080] Pre-condition - Step 03: Enter in Password Textbox with value:automationfc
+[INFO ] [2022-07-18 10:49:50,359] Pre-condition - Step 04: Click on Login Button
+[INFO ] [2022-07-18 10:50:01,202] Create_Post - Step 01: Click on 'Posts' menu Link
+[INFO ] [2022-07-18 10:50:04,531] Create_Post - Step 02: Get 'Search Posts' page Url
+[INFO ] [2022-07-18 10:50:04,549] Create_Post - Step 03: Click on 'Add New' Button
+[INFO ] [2022-07-18 10:50:11,505] Create_Post - Step 04: Enter in post title
+[INFO ] [2022-07-18 10:50:16,983] Create_Post - Step 05: Enter in post body
+[INFO ] [2022-07-18 10:50:22,508] Create_Post - Step 06: Click on 'Publish' Button
+[INFO ] [2022-07-18 10:50:23,004] Create_Post - Step 07: Click on 'Re-Publish' Button
+[INFO ] [2022-07-18 10:50:23,766] Create_Post - Step 08: Verify 'Post Published.' message is displayed
+[INFO ] [2022-07-18 10:50:27,188]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:27,413] Search_Post - Step 01: Open 'Search Post' Page
+[INFO ] [2022-07-18 10:50:31,069] Search_Post - Step 02: Enter in Search Textbox
+[INFO ] [2022-07-18 10:50:31,583] Search_Post - Step 03: Click on 'Search Posts' Button
+[INFO ] [2022-07-18 10:50:36,036] Search_Post - Step 04: Verify Search table contains'Live Coding Title1970'
+[INFO ] [2022-07-18 10:50:36,187]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:36,187] Search_Post - Step 05: Verify Search table contains 'Automation Admin'
+[INFO ] [2022-07-18 10:50:36,286]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:36,286] Search_Post - Step 06: Open End User Site
+[INFO ] [2022-07-18 10:50:38,880] Search_Post - Step 07: Verify Post Infor Displayed at HomePage
+[INFO ] [2022-07-18 10:50:38,977]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:39,068]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:39,145]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:39,232]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:39,232] Search_Post - Step 08: Click on Post Title
+[INFO ] [2022-07-18 10:50:41,532] Search_Post - Step 09: Verify Post Infor Displayed at Post detail Page
+[INFO ] [2022-07-18 10:50:41,602]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:41,672]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:41,746]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:41,820]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:50:41,832] Edit_Post - Step 01: Open Admin site
+[INFO ] [2022-07-18 10:50:44,507] Edit_Post - Step 02: Click on 'Posts' link
+[INFO ] [2022-07-18 10:50:47,102] Edit_Post - Step 03: Enter in Search Textbox
+[INFO ] [2022-07-18 10:50:47,411] Edit_Post - Step 04: Click on 'Search Posts' Button
+[INFO ] [2022-07-18 10:50:51,684] Edit_Post - Step 05: Click on Post title detail link and navigate to Edit Post Page
+[INFO ] [2022-07-18 10:50:56,273] Edit_Post - Step 06: Enter in post title
+[INFO ] [2022-07-18 10:51:00,461] Edit_Post - Step 07: Enter in post body
+[INFO ] [2022-07-18 10:51:05,611] Edit_Post - Step 08: Click on 'Update' Button
+[INFO ] [2022-07-18 10:51:05,926] Edit_Post - Step 09: Verify 'Post Updated.' message is displayed
+[INFO ] [2022-07-18 10:51:07,888]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:07,888] Edit_Post - Step 10: Open 'Search Post' Page
+[INFO ] [2022-07-18 10:51:11,742] Edit_Post - Step 11: Enter in Search Textbox
+[INFO ] [2022-07-18 10:51:12,006] Edit_Post - Step 12: Click on 'Search Posts' Button
+[INFO ] [2022-07-18 10:51:16,091] Edit_Post - Step 13: Verify Search table contains'Edit Post Title1970'
+[INFO ] [2022-07-18 10:51:16,211]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:16,212] Edit_Post - Step 14: Verify Search table contains 'Automation Admin'
+[INFO ] [2022-07-18 10:51:16,306]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:16,306] Edit_Post - Step 15: Open End User Site
+[INFO ] [2022-07-18 10:51:18,687] Edit_Post - Step 16: Verify Post Infor Displayed at HomePage
+[INFO ] [2022-07-18 10:51:18,758]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:18,833]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:18,915]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:18,981]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:18,982] Edit_Post - Step 17: Click on Edit Post Title
+[INFO ] [2022-07-18 10:51:20,993] Edit_Post - Step 18: Verify Post Infor Displayed at Post detail Page
+[INFO ] [2022-07-18 10:51:21,076]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:21,147]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:21,217]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:21,284]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:21,295] Delete_Post - Step 01: Open Admin site
+[INFO ] [2022-07-18 10:51:23,880] Delete_Post - Step 02: Click on 'Posts' link
+[INFO ] [2022-07-18 10:51:26,495] Delete_Post - Step 03: Enter in Search Textbox
+[INFO ] [2022-07-18 10:51:26,760] Delete_Post - Step 04: Click on 'Search Posts' Button
+[INFO ] [2022-07-18 10:51:30,553] Delete_Post - Step 05: Select Post Detail checkbox
+[INFO ] [2022-07-18 10:51:30,791] Delete_Post - Step 06: Select 'Move to Trash' item in dropdown
+[INFO ] [2022-07-18 10:51:31,002] Delete_Post - Step 07: Click on 'Apply' button
+[INFO ] [2022-07-18 10:51:34,882] Delete_Post - Step 08: Verify '1 post moved to the trash.' message is displayed
+[INFO ] [2022-07-18 10:51:34,983] Delete_Post - Step 09: Enter in Search Textbox
+[INFO ] [2022-07-18 10:51:35,212] Delete_Post - Step 10: Click on 'Search Posts' Button
+[INFO ] [2022-07-18 10:51:38,979] Delete_Post - Step 11: Verify 'No posts found.' message is displayed
+[INFO ] [2022-07-18 10:51:39,064] Search_Post - Step 12: Open End User Site
+[INFO ] [2022-07-18 10:51:41,384] Search_Post - Step 13: Verify Post Title Undisplayed at HomePage
+[INFO ] [2022-07-18 10:51:46,404]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-07-18 10:51:46,405] Search_Post - Step 14: Enter Deleted Post Title in Search box at HomePage
+[INFO ] [2022-07-18 10:51:48,643] Search_Post - Step 15: Click on Search Button
+[INFO ] [2022-07-18 10:51:50,768] Search_Post - Step 16: Verify 'Nothing Found' message is displayed
+[INFO ] [2022-07-18 10:51:50,808]  -------------------------- PASSED -------------------------- 
