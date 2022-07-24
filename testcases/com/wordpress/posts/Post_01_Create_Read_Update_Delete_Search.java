@@ -88,7 +88,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		verifyTrue(adminPostAddNewPage.isPostPublishedDisplayed("Post published."));
 	}
 
-	@Test
+	//@Test
 	public void Post_02_Search_And_View_Post() {
 		log.info("Search_Post - Step 01: Open 'Search Post' Page");
 		adminPostsSearchPage = adminPostAddNewPage.openSearchPostPageUrl(searchPostUrl);
@@ -126,7 +126,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 
 	}
 
-	@Test
+	//@Test
 	public void Post_03_Edit_Post() {
 		log.info("Edit_Post - Step 01: Open Admin site");
 		adminDashboardPage=userPostDetailPage.openAdminSite(driver, this.adminUrl);
@@ -192,7 +192,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	}
 
 	
-	@Test
+	//@Test
 	public void Post_04_Delete_Post() {
 		log.info("Delete_Post - Step 01: Open Admin site");
 		adminDashboardPage=userPostDetailPage.openAdminSite(driver, this.adminUrl);
@@ -249,7 +249,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {
-		// closeBrowserAndDriver();
+		closeBrowserAndDriver();
 	}
 
 }

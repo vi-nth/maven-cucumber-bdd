@@ -18,11 +18,12 @@ public class UserHomePageObject extends BasePage {
 	public UserRegisterPageObject clickToRegisterLink() {
 	waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
 	clickToElement(driver, HomePageUI.REGISTER_LINK);
-	// 2
-	//return new RegisterPageObject(driver);
 	return PageGeneratorManager.getRegisterPage(driver);
 		
 	}
+	
+
+	
 	@Step("Navigate to Login Page")
 	public UserLoginPageObject openLoginPage() {
 	waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
@@ -44,6 +45,14 @@ public class UserHomePageObject extends BasePage {
 		return PageGeneratorManager.getUserCustomerInforPage(driver);
 	}
 
+	public UserRegisterPageObject clickButtonLinkByHref(String href) {
+		if (driver.toString().toLowerCase().contains("internet explorer")) {
+			driver.get(getElementAttribute(driver, HomePageUI.CLICK_BUTTON_BY_HREF, "href"));
+		}else {
+			clickToElement(driver, HomePageUI.CLICK_BUTTON_BY_HREF);
+		}
+		return PageGeneratorManager.getRegisterPage(driver);
+	}
 
 
 

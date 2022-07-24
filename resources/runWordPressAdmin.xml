@@ -24,5 +24,17 @@
 			<package name="com.wordpress.admin" />
 		</packages>
 	</test>
+	
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class
+				name="com.wordpress.posts.Post_01_Create_Read_Update_Delete_Search" />
+		</classes>
+
+		<packages>
+			<package name="com.wordpress.admin" />
+		</packages>
+	</test>
 
 </suite>

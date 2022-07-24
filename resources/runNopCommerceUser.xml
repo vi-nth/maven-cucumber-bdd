@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce - User">
+<suite name="NopCommerce - User" parallel = "classes" thread-count = "3">
 
 	<listeners>
 			<listener class-name="commons.MethodListener"/>
@@ -9,11 +9,13 @@
 <!-- 			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> -->
 	</listeners>
 	
-	<test name="Run on Chrome">
-		<parameter name="browser" value="chrome" />
+	<test name="Run on ie">
+		<parameter name="browser" value="ie" />
 		<classes>
 <!-- 			<class name="com.nopcommerce.common.Common_01_Register_Cookies" /> -->
-			<class name="com.nopcommerce.user.Level_14_Log_ReportNG" />
+<!-- 			<class name="com.nopcommerce.user.Level_18_Pattern_Object" /> -->
+<!-- 			<class name="com.nopcommerce.user.Level_18_Pattern_Object" /> -->
+			<class name="com.nopcommerce.user.Level_18_Run_On_IE" />
 		</classes>
 	</test>
 

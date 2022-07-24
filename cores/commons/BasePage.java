@@ -31,6 +31,7 @@ import pageObjects.wordpress.admin.AdminDashboardPO;
 import pageObjects.wordpress.admin.UserHomePO;
 import pageUIs.jQuery.uploadFile.BasePageJQueryUI;
 import pageUIs.navigation.BasePageUI;
+import pageUIs.nopCommerce.user.HomePageUI;
 import pageObjects.navigation.FooterContainerPageObject;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
 
@@ -215,11 +216,24 @@ public class BasePage {
 	}
 
 	protected void clickToElement(WebDriver driver, String locatorType) {
-		getWebElement(driver, locatorType).click();
+		if(driver.toString().contains("InternetExplorerDriver")) {
+			clickToElementByJS(driver, locatorType);
+			sleepInSecond(3);
+		}else {
+			getWebElement(driver, locatorType).click();
+		}
+		
 	}
+	
+
 
 	protected void clickToElement(WebDriver driver, String locatorType, String... dynamicValues) {
-		getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).click();
+		if(driver.toString().contains("InternetExplorerDriver")) {
+			clickToElementByJS(driver, locatorType, dynamicValues);
+			sleepInSecond(3);
+		}else {
+			getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).click();
+		}
 	}
 
 	protected void sendkeyToElement(WebDriver driver, String locatorType, String textValue) {
