@@ -57,5 +57,8 @@
 	<classpathentry kind="lib" path="libAllure/aspectjrt-1.9.8.jar"/>
 	<classpathentry kind="lib" path="libAllure/aspectjtools-1.9.8.jar"/>
 	<classpathentry kind="lib" path="libAllure/aspectjweaver-1.9.8.jar"/>
+	<classpathentry kind="lib" path="libFaker/generex-1.0.2.jar"/>
+	<classpathentry kind="lib" path="libFaker/javafaker-1.0.1.jar" sourcepath="libFaker/javafaker-1.0.1-sources.jar"/>
+	<classpathentry kind="lib" path="libFaker/snakeyaml-1.23.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

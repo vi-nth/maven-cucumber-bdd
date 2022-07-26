@@ -19,10 +19,12 @@ import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
+import utilities.DataHelper;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
 
-public class Level_18_Run_On_IE extends BaseTest {
+public class Level_20_Fake_Data extends BaseTest {
 	private WebDriver driver;
+	private DataHelper dataFaker;
 
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
@@ -36,13 +38,13 @@ public class Level_18_Run_On_IE extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		sleepInSecond(10);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
-		sleepInSecond(10);
-		firstName = "Automation";
-		lastName = "FC";
-		emailAddress = "afc" + generateFakeNumber() + "@gmail.us";
-		password = "123456";
+		dataFaker = DataHelper.getDataHelper();
+		
+		firstName = dataFaker.getFirstName();
+		lastName = dataFaker.getLastName();
+		emailAddress = dataFaker.getEmailAddrress();
+		password = dataFaker.getPassword();
 		date="10";
 		month = "August";
 		year = "1998";
@@ -51,10 +53,7 @@ public class Level_18_Run_On_IE extends BaseTest {
 	@Test
 	public void User_01_Register() {
 		log.info("Register - Step 01: Navigate to Register Page");
-		sleepInSecond(10);
 		registerPage = homePage.clickToRegisterLink();
-		sleepInSecond(10);
-		//registerPage = homePage.clickButtonLinkByHref("/register?returnUrl=%2F");
 		
 		registerPage.clickToRadioButtonByLabel(driver, "Female");
 		
@@ -90,13 +89,12 @@ public class Level_18_Run_On_IE extends BaseTest {
 		log.info("Register - Step 08: Verify Register successful Message is displayed");
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 	
-		log.info("Register - Step 09: Click To Logout Link");
-		homePage = registerPage.clickToLogoutLink();
-		
 	}
 	
 	@Test
 	public void User_02_Login() {
+		log.info("Register - Step 09: Click To Logout Link");
+		homePage = registerPage.clickToLogoutLink();
 		
 		log.info("Login - Step 01: Navigate To Login Page");
 		loginPage = homePage.openLoginPage();
@@ -124,19 +122,19 @@ public class Level_18_Run_On_IE extends BaseTest {
 	
 	@Test
 	public void User_03_My_Account() {
-		log.info("MyAccount - Step 01: Navigate To 'My Account' Page");
+		log.info("Login - Step 01: Navigate To 'My Account' Page");
 		customerInforPage = homePage.openMyAccountLink();
 		
-		log.info("MyAccount - Step 02: Verify 'Customer Infor Page' is displayed");
+		log.info("Login - Step 02: Verify 'Customer Infor Page' is displayed");
 		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
 		
-		log.info("MyAccount - Step 03: Verify 'First Name' value is correctly");
+		log.info("Login - Step 03: Verify 'First Name' value is correctly");
 		Assert.assertEquals(customerInforPage.getTextboxByAttributeValueByID(driver,"FirstName"), firstName);
 		
-		log.info("MyAccount - Step 04: Verify 'Last Name' value is correctly");
+		log.info("Login - Step 04: Verify 'Last Name' value is correctly");
 		Assert.assertEquals(customerInforPage.getTextboxByAttributeValueByID(driver,"LastName"), lastName);
 		
-		log.info("MyAccount - Step 05: Verify 'Email Name' value is correctly");
+		log.info("Login - Step 05: Verify 'Email Name' value is correctly");
 		Assert.assertEquals(customerInforPage.getTextboxByAttributeValueByID(driver,"Email"), emailAddress);
 		
 		

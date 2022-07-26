@@ -216,7 +216,7 @@ public class BasePage {
 	}
 
 	protected void clickToElement(WebDriver driver, String locatorType) {
-		if(driver.toString().contains("InternetExplorerDriver")) {
+		if(driver.toString().contains("internet explorer")) {
 			clickToElementByJS(driver, locatorType);
 			sleepInSecond(3);
 		}else {
@@ -228,7 +228,7 @@ public class BasePage {
 
 
 	protected void clickToElement(WebDriver driver, String locatorType, String... dynamicValues) {
-		if(driver.toString().contains("InternetExplorerDriver")) {
+		if(driver.toString().contains("internet explorer")) {
 			clickToElementByJS(driver, locatorType, dynamicValues);
 			sleepInSecond(3);
 		}else {

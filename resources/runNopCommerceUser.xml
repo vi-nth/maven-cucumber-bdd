@@ -9,13 +9,13 @@
 <!-- 			<listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> -->
 	</listeners>
 	
-	<test name="Run on ie">
-		<parameter name="browser" value="ie" />
+	<test name="Run on chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
 <!-- 			<class name="com.nopcommerce.common.Common_01_Register_Cookies" /> -->
 <!-- 			<class name="com.nopcommerce.user.Level_18_Pattern_Object" /> -->
 <!-- 			<class name="com.nopcommerce.user.Level_18_Pattern_Object" /> -->
-			<class name="com.nopcommerce.user.Level_18_Run_On_IE" />
+			<class name="com.nopcommerce.user.Level_20_Fake_Data" />
 		</classes>
 	</test>
 

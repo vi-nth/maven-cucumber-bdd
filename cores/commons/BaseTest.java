@@ -148,6 +148,7 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.get(GlobalConstants.PORTAL_PAGE_URL);
+		System.out.println("Driver ID="+driver.toString());
 		// driver.get(getEnvironmentUrl(environmentName));
 		return driver;
 	}
