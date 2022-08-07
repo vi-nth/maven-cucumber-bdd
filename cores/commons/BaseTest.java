@@ -20,6 +20,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
@@ -118,7 +119,12 @@ public class BaseTest {
 		} else if (browserList == BrowserList.EDGE) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else if (browserList == BrowserList.COCCOC) {
+			
+		} else if (browserList == BrowserList.SAFARI) {
+			WebDriverManager.edgedriver().setup();
+			driver = new SafariDriver();
+			
+		}else if (browserList == BrowserList.COCCOC) {
 			// Cococ browser trừ đi 5-6 version
 			WebDriverManager.chromedriver().driverVersion("99.0.4844.51").setup();
 			ChromeOptions options = new ChromeOptions();

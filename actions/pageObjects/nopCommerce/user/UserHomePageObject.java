@@ -14,7 +14,7 @@ public class UserHomePageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	@Step("Navigate to Register Page")
+	//@Step("Navigate to Register Page")
 	public UserRegisterPageObject clickToRegisterLink() {
 	waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
 	clickToElement(driver, HomePageUI.REGISTER_LINK);
@@ -24,7 +24,7 @@ public class UserHomePageObject extends BasePage {
 	
 
 	
-	@Step("Navigate to Login Page")
+	//@Step("Navigate to Login Page")
 	public UserLoginPageObject openLoginPage() {
 	waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
 	clickToElement(driver, HomePageUI.LOGIN_LINK);
@@ -32,13 +32,13 @@ public class UserHomePageObject extends BasePage {
 	
 	}
 	
-	@Step("Verify 'My Account' link is displayed")
+	//@Step("Verify 'My Account' link is displayed")
 	public boolean isMyAccountLinkDisplayed() {
 		waitForElementVisible(driver, HomePageUI.MY_ACCOUNT_LINK);
 		return isElementDisplayed(driver, HomePageUI.MY_ACCOUNT_LINK);
 	}
 
-	@Step("Navigate to Customer Infor Page")
+	//@Step("Navigate to Customer Infor Page")
 	public UserCustomerInforPageObject openMyAccountLink() {
 		waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);

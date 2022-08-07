@@ -19,7 +19,6 @@ import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import reportConfig.ExtentTestManager;
 
-
 public class Level_15_EntentV5 extends BaseTest {
 	private WebDriver driver;
 
@@ -28,12 +27,12 @@ public class Level_15_EntentV5 extends BaseTest {
 	private UserLoginPageObject loginPage;
 	private UserCustomerInforPageObject customerInforPage;
 
-
-	private String emailAddress, firstName, lastName, password;
+	private String emailAddress, firstName, lastName, password, browserName;
 
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
+		this.browserName = browserName.toUpperCase();
 		driver = getBrowserDriver(browserName);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		firstName = "Automation";
@@ -44,7 +43,7 @@ public class Level_15_EntentV5 extends BaseTest {
 
 	@Test
 	public void User_01_Register(Method method) {
-		ExtentTestManager.startTest(method.getName(), "Register to system with valid Email and Password");
+		ExtentTestManager.startTest(method.getName() + "-" + browserName,"Register to system with valid Email and Password");
 		ExtentTestManager.getTest().log(Status.INFO, "Register - Step 01: Navigate to 'Register' page");
 		registerPage = homePage.clickToRegisterLink();
 
@@ -79,15 +78,17 @@ public class Level_15_EntentV5 extends BaseTest {
 
 	@Test
 	public void User_02_Login(Method method) {
-		ExtentTestManager.startTest(method.getName(), "Login to system successfully");
+		ExtentTestManager.startTest(method.getName()+ "-" + browserName, "Login to system successfully");
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 01: Navigate to Login page");
 		homePage = registerPage.clickToLogoutLink();
 		loginPage = homePage.openLoginPage();
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 02: Enter to Email textbox with value is '" + emailAddress + "'");
+		ExtentTestManager.getTest().log(Status.INFO,
+				"Login - Step 02: Enter to Email textbox with value is '" + emailAddress + "'");
 		loginPage.inputToEmailTexttbox(emailAddress);
 
-		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 03: Enter to Password textbox with value is '" + password + "'");
+		ExtentTestManager.getTest().log(Status.INFO,
+				"Login - Step 03: Enter to Password textbox with value is '" + password + "'");
 		loginPage.inputToPasswordTextbox(password);
 
 		ExtentTestManager.getTest().log(Status.INFO, "Login - Step 04: Click to Login button");
@@ -104,13 +105,10 @@ public class Level_15_EntentV5 extends BaseTest {
 
 	}
 
-
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
-		
+
 	}
-
-
 
 }
