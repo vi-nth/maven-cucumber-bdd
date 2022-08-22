@@ -1,4 +1,4 @@
-package automation.api.com;
+package com.bankguru.user;
 
 public class AutoSuggest {
 

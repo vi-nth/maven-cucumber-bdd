@@ -40,7 +40,7 @@ public class BaseTest {
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
 	}
-
+	
 	protected WebDriver getBrowserDriver(String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		if (browserList == BrowserList.FIREFOX) {
@@ -82,21 +82,21 @@ public class BaseTest {
 		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--incognito");
-			
-			Map<String, Object> prefs = new HashMap<String, Object>();
-			prefs.put("profile.default_content_settings.popups", 0);
-			prefs.put("download.default_directory", GlobalConstants.PROJECT_PATH + "\\downloadFiles");
-			prefs.put("credentials_enable_service", false);
-			prefs.put("profile.password_manager_enabled", false);
-			options.setExperimentalOption("prefs", prefs);
+//			options.addArguments("--incognito");
+//			
+//			Map<String, Object> prefs = new HashMap<String, Object>();
+//			prefs.put("profile.default_content_settings.popups", 0);
+//			prefs.put("download.default_directory", GlobalConstants.PROJECT_PATH + "\\downloadFiles");
+//			prefs.put("credentials_enable_service", false);
+//			prefs.put("profile.password_manager_enabled", false);
+//			options.setExperimentalOption("prefs", prefs);
 
 			// Setting language
 //			options.addArguments("--lang=vi");
 //			options.addArguments("--disable-notifications"); 
 //			options.addArguments("--disable-geolocation");
-			options.setExperimentalOption("useAutomationExtension", false);
-			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+//			options.setExperimentalOption("useAutomationExtension", false);
+//			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			driver = new ChromeDriver(options);
 
 			// Disable log in Chrome
@@ -236,6 +236,7 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		// driver.get(GlobalConstants.JQUREY_PAGE_URL);
+		// driver.get(getEnvironmentUrl(appUrl));
 		driver.get(appUrl);
 		return driver;
 	}
@@ -244,14 +245,15 @@ public class BaseTest {
 		String envUrl = null;
 		EnvironmentList environment = EnvironmentList.valueOf(severName.toUpperCase());
 		if (environment == EnvironmentList.DEV) {
-			envUrl = "https://demo.nopcommerce.com/";
+			envUrl = "https://demo.guru99.com/V1/";
 		} else if (environment == EnvironmentList.TESTING) {
-			envUrl = "https://admin-demo.nopcommerce.com";
+			envUrl = "https://demo.guru99.com/V2/";
 		} else if (environment == EnvironmentList.STAGING) {
-			envUrl = "";
+			envUrl = "https://demo.guru99.com/V3/";
 		} else if (environment == EnvironmentList.PRODUCTION) {
-			envUrl = "";
+			envUrl = "https://demo.guru99.com/V4/";
 		}
+		System.out.println(envUrl);
 		return envUrl;
 
 	}
