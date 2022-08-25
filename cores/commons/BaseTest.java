@@ -191,6 +191,7 @@ public class BaseTest {
 			// Add extension to Chrome
 			File file = new File(GlobalConstants.PROJECT_PATH + "\\browserExtentions\\google-translate.crx");
 			ChromeOptions options = new ChromeOptions();
+			options.setAcceptInsecureCerts(true);
 			options.addExtensions(file);
 			driver = new ChromeDriver(options);
 
