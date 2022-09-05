@@ -50,8 +50,6 @@ public class Level_20_Manage_Data4 extends BaseTest {
 		System.out.println(userData.getSubjects().get(1).getName());
 		System.out.println(userData.getSubjects().get(1).getPoint());
 	
-	
-
 	}
 
 	@Test

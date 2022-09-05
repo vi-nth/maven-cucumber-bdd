@@ -1,1 +1,0 @@
-{"uuid":"e05e1936-0bd7-451d-a941-08b06686d4d5","name":"BankGuru - User","children":["b3c043fb-e511-42b9-ae9f-b9261d3a8eb2"],"befores":[{"name":"initBeforeSuite","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1660488631325,"stop":1660488631337}],"afters":[],"links":[],"start":1660488631293,"stop":1660488645374}

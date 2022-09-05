@@ -1,0 +1,80 @@
+[INFO ] [2022-08-25 21:39:16,715] Pre-condition - Step 01: Open browser and Admin Url
+[INFO ] [2022-08-25 21:39:25,738] Pre-condition - Step 02: Enter in Username Textbox with value:automationfc
+[INFO ] [2022-08-25 21:39:56,573] OS name = windows 10
+[INFO ] [2022-08-25 21:39:56,574] Driver instance name = chromedriver: chrome on windows (b8243dcc76e80523de4be5e7d063aa64)
+[INFO ] [2022-08-25 21:39:58,555] Pre-condition - Step 01: Open browser and Admin Url
+[INFO ] [2022-08-25 21:40:12,843] Pre-condition - Step 02: Enter in Username Textbox with value:automationfc
+[INFO ] [2022-08-25 21:40:13,881] Pre-condition - Step 03: Enter in Password Textbox with value:automationfc
+[INFO ] [2022-08-25 21:40:14,177] Pre-condition - Step 04: Click on Login Button
+[INFO ] [2022-08-25 21:40:19,702] View_User - Step 01: Click on 'User' menu Link
+[INFO ] [2022-08-25 21:40:27,085] View_User - Step 02: Get all User form UI
+[INFO ] [2022-08-25 21:40:27,338] View_User - Step 03: Get all User form DB
+[INFO ] [2022-08-25 21:40:28,325] View_User - Step 04: Verify number of User at UI equal DB
+[INFO ] [2022-08-25 21:40:28,328]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-08-25 21:40:28,347] OS name = windows 10
+[INFO ] [2022-08-25 21:40:28,348] Driver instance name = firefoxdriver: firefox on windows (f881a2e3-3a65-4d08-8c72-e5e745bde609)
+[INFO ] [2022-08-25 21:46:11,091] Pre-condition - Step 01: Open browser and Admin Url
+[INFO ] [2022-08-25 21:46:21,057] Pre-condition - Step 02: Enter in Username Textbox with value:automationfc
+[INFO ] [2022-08-25 21:46:21,529] Pre-condition - Step 03: Enter in Password Textbox with value:automationfc
+[INFO ] [2022-08-25 21:46:21,822] Pre-condition - Step 04: Click on Login Button
+[INFO ] [2022-08-25 21:46:30,113] View_User - Step 01: Click on 'User' menu Link
+[INFO ] [2022-08-25 21:46:33,512] View_User - Step 02: Get all User form UI
+[INFO ] [2022-08-25 21:46:33,619] View_User - Step 03: Get all User form DB
+[INFO ] [2022-08-25 21:46:34,221] View_User - Step 04: Verify number of User at UI equal DB
+[INFO ] [2022-08-25 21:46:34,224]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-08-25 21:46:34,413] OS name = windows 10
+[INFO ] [2022-08-25 21:46:34,413] Driver instance name = chromedriver: chrome on windows (56b77b1f5d1fa933ebd1591d73da512f)
+[INFO ] [2022-08-25 21:46:35,779] Pre-condition - Step 01: Open browser and Admin Url
+[INFO ] [2022-08-25 21:46:49,239] Pre-condition - Step 02: Enter in Username Textbox with value:automationfc
+[INFO ] [2022-08-25 21:46:50,309] Pre-condition - Step 03: Enter in Password Textbox with value:automationfc
+[INFO ] [2022-08-25 21:46:50,681] Pre-condition - Step 04: Click on Login Button
+[INFO ] [2022-08-25 21:46:56,201] View_User - Step 01: Click on 'User' menu Link
+[INFO ] [2022-08-25 21:47:03,411] View_User - Step 02: Get all User form UI
+[INFO ] [2022-08-25 21:47:03,574] View_User - Step 03: Get all User form DB
+[INFO ] [2022-08-25 21:47:03,584] View_User - Step 04: Verify number of User at UI equal DB
+[INFO ] [2022-08-25 21:47:03,584]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-08-25 21:47:03,592] OS name = windows 10
+[INFO ] [2022-08-25 21:47:03,592] Driver instance name = firefoxdriver: firefox on windows (2c25292e-10d5-4a97-a69e-0f9ab8e0c58c)
+[INFO ] [2022-08-25 21:50:59,934] Pre-condition - Step 01: Open browser and Admin Url
+[INFO ] [2022-08-25 21:51:09,838] Pre-condition - Step 02: Enter in Username Textbox with value:automationfc
+[INFO ] [2022-08-25 21:51:10,133] Pre-condition - Step 03: Enter in Password Textbox with value:automationfc
+[INFO ] [2022-08-25 21:51:10,435] Pre-condition - Step 04: Click on Login Button
+[INFO ] [2022-08-25 21:51:16,395] View_User - Step 01: Click on 'User' menu Link
+[INFO ] [2022-08-25 21:51:20,060] View_User - Step 02: Get all User form UI
+[INFO ] [2022-08-25 21:51:20,299] View_User - Step 03: Get all User form DB
+[INFO ] [2022-08-25 21:51:21,146] View_User - Step 04: Verify number of User at UI equal DB
+[INFO ] [2022-08-25 21:51:21,150]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-08-25 21:51:21,379] OS name = windows 10
+[INFO ] [2022-08-25 21:51:21,380] Driver instance name = chromedriver: chrome on windows (8fd6ba105830617ae5970f5f46afec98)
+[INFO ] [2022-08-25 21:51:23,010] Pre-condition - Step 01: Open browser and Admin Url
+[INFO ] [2022-08-25 21:51:32,649] Pre-condition - Step 02: Enter in Username Textbox with value:automationfc
+[INFO ] [2022-08-25 21:51:33,150] Pre-condition - Step 03: Enter in Password Textbox with value:automationfc
+[INFO ] [2022-08-25 21:51:33,298] Pre-condition - Step 04: Click on Login Button
+[INFO ] [2022-08-25 21:51:38,440] View_User - Step 01: Click on 'User' menu Link
+[INFO ] [2022-08-25 21:51:41,522] View_User - Step 02: Get all User form UI
+[INFO ] [2022-08-25 21:51:41,639] View_User - Step 03: Get all User form DB
+[INFO ] [2022-08-25 21:51:41,647] View_User - Step 04: Verify number of User at UI equal DB
+[INFO ] [2022-08-25 21:51:41,647]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-08-25 21:51:41,655] OS name = windows 10
+[INFO ] [2022-08-25 21:51:41,655] Driver instance name = firefoxdriver: firefox on windows (eaa38b16-9d19-4698-8f0d-a5f6fe478926)
+[INFO ] [2022-08-30 18:33:02,915] Register - Step 01: Navigate to Register Page
+[INFO ] [2022-08-30 18:33:04,801] Register - Step 02: Enter to FirstName Textbox with value is 'Automation'
+[INFO ] [2022-08-30 18:33:05,179] Register - Step 03: Enter to LastName Textbox with value is 'Fc'
+[INFO ] [2022-08-30 18:33:06,293] Register - Step 04: Enter to EmailAddress Textbox with value is 'automationfc5541@gmail.us'
+[INFO ] [2022-08-30 18:33:06,826] Register - Step 05: Enter to Password Textbox with value is '123456'
+[INFO ] [2022-08-30 18:33:07,118] Register - Step 06: Enter to Confirm Password Textbox with value is '123456'
+[INFO ] [2022-08-30 18:33:07,453] Register - Step 07: Click To Register Button
+[INFO ] [2022-08-30 18:33:08,598] Register - Step 08: Verify Register successful Message is displayed
+[INFO ] [2022-08-30 18:33:08,838] Register - Step 09: Click To Logout Link
+[INFO ] [2022-08-30 18:33:09,900] Login - Step 01: Navigate To Login Page
+[INFO ] [2022-08-30 18:33:10,724] Login - Step 02: Enter to emailAddress Textbox with value is 'automationfc5541@gmail.us
+[INFO ] [2022-08-30 18:33:11,022] Login - Step 03: Enter to Password Textbox with value is '123456
+[INFO ] [2022-08-30 18:33:11,256] Login - Step 04: Click To Login Button
+[INFO ] [2022-08-30 18:33:12,301] Login - Step 05: Verify 'My Account' Link is Displayed
+[INFO ] [2022-08-30 18:33:12,410] Login - Step 06: Navigate To 'My Account' Page
+[INFO ] [2022-08-30 18:33:13,228] Login - Step 07: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-08-30 18:33:13,393] Login - Step 01: Navigate To 'My Account' Page
+[INFO ] [2022-08-30 18:33:14,062] Login - Step 02: Verify 'Customer Infor Page' is displayed
+[INFO ] [2022-08-30 18:33:14,197] Login - Step 03: Verify 'First Name' value is correctly
+[INFO ] [2022-08-30 18:33:14,296] Login - Step 04: Verify 'Last Name' value is correctly
+[INFO ] [2022-08-30 18:33:14,356] Login - Step 05: Verify 'Email Name' value is correctly
