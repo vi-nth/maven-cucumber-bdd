@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="JQuery" parallel = "classes" thread-count = "3">
 
- <parameter name = "url" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"/>
+ <parameter name = "envName" value="saucelab"/>
+ <parameter name = "url" value="dev"/>
 
 	<listeners>
 			<listener class-name="commons.MethodListener"/>
@@ -15,7 +16,7 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="osName" value="Windows" />
 		<classes>
-			<class name="com.jquery.cloud.Level_22_Live_Config_IV_Saucelab" />
+			<class name="com.jquery.cloud.Level_22_Live_Config_VII_All" />
 		</classes>
 	</test>
 	
@@ -23,7 +24,7 @@
 <!-- 		<parameter name="browser" value="firefox" /> -->
 <!-- 		<parameter name="osName" value="macOS 11.00" /> -->
 <!-- 		<classes> -->
-<!-- 			<class name="com.jquery.cloud.Level_22_Live_Config_IV_Saucelab" /> -->
+<!-- 			<class name="com.jquery.cloud.Level_22_Live_Config_VII_All" /> -->
 <!-- 		</classes> -->
 <!-- 	</test> -->
 

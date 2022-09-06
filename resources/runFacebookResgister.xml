@@ -2,7 +2,7 @@
 <suite name="LiveGuru">
 
 
- <parameter name = "url" value="https://www.facebook.com/"/>
+ <parameter name = "severName" value="FACEBOOK"/>
 
   <test name="Run on Chrome">
   <parameter name = "browser" value="chrome"/>

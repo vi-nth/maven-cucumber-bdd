@@ -10,6 +10,7 @@
 
 	</listeners>
 
+	<parameter name="envName" value="local" />
 	<parameter name="urlAdmin" value="https://automationfc.net/wp-admin" />
 	<parameter name="urlUser" value="https://automationfc.net" />
 

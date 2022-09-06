@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -31,12 +32,14 @@ public class Level_21_Multiple_Environment_Owner extends BaseTest {
 	Environment environment;
 
 
-	@Parameters({"browser", "url"})
+	@Parameters({ "envName", "severName", "browser", "ipAddress", "portNumber", "osName", "osVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName, String appUrl) {
-		ConfigFactory.setProperty("env", appUrl);
+	public void beforeClass(@Optional("local") String envName, @Optional("dev") String severName,
+			@Optional("chrome") String browserName, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion) {
+		driver = getBrowserDriver(envName, severName, browserName, ipAddress, portNumber, osName, osVersion);
+		ConfigFactory.setProperty("env", severName);
 		environment = ConfigFactory.create(Environment.class);
-		driver = getBrowserDriver(browserName,environment.appUrl());
 		
 		System.out.println(environment.osName());
 		System.out.println("Current url = " + driver.getCurrentUrl());

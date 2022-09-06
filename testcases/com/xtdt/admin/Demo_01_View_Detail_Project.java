@@ -2,6 +2,7 @@ package com.xtdt.admin;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -26,10 +27,12 @@ public class Demo_01_View_Detail_Project extends BaseTest {
 	
 	
 
-	@Parameters({ "browser", "url"})
+	@Parameters({ "envName", "severName", "browser", "ipAddress", "portNumber", "osName", "osVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName, String url) {
-		driver = getBrowserDriver(browserName, url );
+	public void beforeClass(@Optional("local") String envName, @Optional("dev") String severName,
+			@Optional("chrome") String browserName, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion) {
+		driver = getBrowserDriver(envName, severName, browserName, ipAddress, portNumber, osName, osVersion);
 		
 	}
 	

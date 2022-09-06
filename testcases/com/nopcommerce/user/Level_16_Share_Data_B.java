@@ -3,6 +3,7 @@ package com.nopcommerce.user;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -25,10 +26,13 @@ public class Level_16_Share_Data_B extends BaseTest {
 
 	private String emailAddress, firstName, lastName, password;
 
-	@Parameters("browser")
+	@Parameters({ "envName", "severName", "browser", "ipAddress", "portNumber", "osName", "osVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+	public void beforeClass(@Optional("local") String envName, @Optional("dev") String severName,
+			@Optional("chrome") String browserName, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion) {
+		driver = getBrowserDriver(envName, severName, browserName, ipAddress, portNumber, osName, osVersion);
+		
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		firstName = "Automation";
 		lastName = "FC";

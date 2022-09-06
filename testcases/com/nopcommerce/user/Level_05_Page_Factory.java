@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.BrowserType;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -25,11 +26,13 @@ public class Level_05_Page_Factory extends BaseTest {
 	private UserLoginPageObject loginPage;
 	private String validEmail, invalidEmail, notFoundEmail, firstName, lastName, password, incorrectPassword;
 
-	@Parameters("browser")
+	@Parameters({ "envName", "severName", "browser", "ipAddress", "portNumber", "osName", "osVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
-
+	public void beforeClass(@Optional("local") String envName, @Optional("dev") String severName,
+			@Optional("chrome") String browserName, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion) {
+		driver = getBrowserDriver(envName, severName, browserName, ipAddress, portNumber, osName, osVersion);
+		
 		homePage = new UserHomePageObject(driver);
 		registerPage = new UserRegisterPageObject(driver);
 

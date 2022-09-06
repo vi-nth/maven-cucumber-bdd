@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -24,12 +25,12 @@ public class Level_04_Multiple_Browser extends BaseTest {
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 
-	@Parameters({"browser"})
+	@Parameters({ "envName", "severName", "browser", "ipAddress", "portNumber", "osName", "osVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		System.out.println("Run on" + browserName);
-
-		driver= getBrowserDriver(browserName);
+	public void beforeClass(@Optional("local") String envName, @Optional("dev") String severName,
+			@Optional("chrome") String browserName, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion) {
+		driver = getBrowserDriver(envName, severName, browserName, ipAddress, portNumber, osName, osVersion);
 
 		homePage = new UserHomePageObject(driver);
 		firstName = "Automation";

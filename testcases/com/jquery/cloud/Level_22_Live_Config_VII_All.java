@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -16,14 +17,16 @@ import pageObject.jQuery.dataTable.JQueryHomePageObject;
 import pageObject.jQuery.dataTable.JQueryPageGeneratorManager;
 import pageObject.jQuery.dataTable.PageGeneratorManager;
 
-public class Level_22_Live_Config_III_Browserstack extends BaseTest {
+public class Level_22_Live_Config_VII_All extends BaseTest {
 	private WebDriver driver;
 	JQueryHomePageObject jQueryHomePage;
 
-	@Parameters({ "browser", "url", "osName", "osVersion" })
+	@Parameters({ "envName", "severName", "browser", "ipAddress", "portNumber", "osName", "osVersion" })
 	@BeforeClass
-	public void beforeClass(String browserName, String appUrl, String osName, String osVersion) {
-		driver = getBrowserDriverBrowserstack(browserName, appUrl, osName, osVersion);
+	public void beforeClass(@Optional("local") String envName, @Optional("dev") String severName,
+			@Optional("chrome") String browserName, @Optional("localhost") String ipAddress,
+			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion) {
+		driver = getBrowserDriver(envName, severName, browserName, ipAddress, portNumber, osName, osVersion);
 		jQueryHomePage = JQueryPageGeneratorManager.getJQueryHomePage(driver);
 	}
 
@@ -46,7 +49,7 @@ public class Level_22_Live_Config_III_Browserstack extends BaseTest {
 
 	}
 
-	//@Test
+	// @Test
 	public void Table_02_Edit_Or_Delete() {
 		jQueryHomePage.clickToActionButtonByFemale("384187", "remove");
 		jQueryHomePage.sleepInSecond(2);
@@ -68,7 +71,7 @@ public class Level_22_Live_Config_III_Browserstack extends BaseTest {
 
 	}
 
-	//@Test
+	// @Test
 	public void Table_03_Paging() {
 		jQueryHomePage.clickToPageNumber("10");
 		Assert.assertTrue(jQueryHomePage.verifyPageNumberDisplayed("10"));
@@ -79,7 +82,7 @@ public class Level_22_Live_Config_III_Browserstack extends BaseTest {
 
 	}
 
-	//@Test
+	// @Test
 	public void Table_04_Enter_To_Textbox_At_Any_Row() {
 		jQueryHomePage.clickToLoadButton();
 		jQueryHomePage.sleepInSecond(2);

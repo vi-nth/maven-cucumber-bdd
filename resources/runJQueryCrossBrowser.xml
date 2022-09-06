@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="JQuery" parallel = "classes" thread-count = "3">
 
- <parameter name = "url" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"/>
-
+ <parameter name = "envName" value="browserStack"/>
+ <parameter name = "severName" value="dev"/>
+ 
 	<listeners>
 			<listener class-name="commons.MethodListener"/>
 			<listener class-name="reportConfig.ExtentTestListener"/>
@@ -15,7 +16,7 @@
 		<parameter name="browser" value="firefox" />
 		<parameter name="osName" value="Windows" />
 		<classes>
-			<class name="com.jquery.cloud.Level_22_Live_Config_V_CrossBrowser" />
+			<class name="com.jquery.cloud.Level_22_Live_Config_VII_All" />
 		</classes>
 	</test>
 	
@@ -24,7 +25,7 @@
 		<parameter name="osName" value="MacOS 11.0" />
 		<parameter name="osVersion" value="Big Sur" />
 		<classes>
-			<class name="com.jquery.cloud.Level_22_Live_Config_V_CrossBrowser" />
+			<class name="com.jquery.cloud.Level_22_Live_Config_VII_All" />
 		</classes>
 	</test>
 
