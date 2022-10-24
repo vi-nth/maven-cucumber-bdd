@@ -29,7 +29,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 
-import factoryEnvironment.BrowserList;
+import factoryBrowser.BrowserList;
 import factoryEnvironment.BrowserStackFactory;
 import factoryEnvironment.CrossBrowserFactory;
 import factoryEnvironment.EnvironmentList;
@@ -130,6 +130,8 @@ public class BaseTest {
 			envUrl = "https://automationfc.net";
 		}else if (environment == EnvironmentList.WORDPRESSADMIN) {
 			envUrl = "https://automationfc.net/wp-admin";
+		}else if (environment == EnvironmentList.NOIKHU) {
+			envUrl = "https://test-noikhu.vimap.vn/Account/Login";
 		}
 		System.out.println(envUrl);
 		return envUrl;

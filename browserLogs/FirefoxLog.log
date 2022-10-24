@@ -1,17 +1,31 @@
-1658554835270	geckodriver	INFO	Listening on 127.0.0.1:46507
-1658554836805	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\IOTLink\\AppData\\Local\\Temp\\rust_mozprofileMLw6yI"
-1658554837589	Marionette	INFO	Marionette enabled
-WARNING: content window passed to PrivateBrowsingUtils.isWindowPrivate. Use isContentWindowPrivate instead (but only for frame scripts).
-pbu_isWindowPrivate@resource://gre/modules/PrivateBrowsingUtils.jsm:27:11
-isBrowserPrivate@resource://gre/modules/PrivateBrowsingUtils.jsm:47:19
-loadURI@resource://gre/modules/RemoteWebNavigation.jsm:90:51
-loadURI/<@chrome://global/content/elements/browser-custom-element.js:851:28
-_wrapURIChangeCall@chrome://global/content/elements/browser-custom-element.js:782:9
-loadURI@chrome://global/content/elements/browser-custom-element.js:850:12
-loadURI@chrome://mozapps/content/extensions/aboutaddons.js:2511:18
-render/<@chrome://mozapps/content/extensions/aboutaddons.js:2490:14
-render@chrome://mozapps/content/extensions/aboutaddons.js:2449:11
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\IOTLink\\AppData\\Local\\Temp\\rust_mozprofileMLw6yI\\search.json.mozlz4", (void 0)))
-1658554841831	Marionette	INFO	Listening on port 61543
-1658554842129	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: resource://gre/modules/PartitioningExceptionListService.jsm, line 69: NS_ERROR_MALFORMED_URI: Component returned failure code: 0x804b000a (NS_ERROR_MALFORMED_URI) [nsIPartitioningExceptionListObserver.onExceptionListUpdate]
+1664935632583	geckodriver	INFO	Listening on 127.0.0.1:43816
+1664935635184	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-notifications" "--disable-geolocation" "--private" "-no-remote" "-profile" "C:\\Users\\IOTLink\\AppData\\Local\\Temp\\rust_mozprofilelngdq1"
+1664935636583	Marionette	INFO	Marionette enabled
+1664935636602	Marionette	INFO	Listening on port 57093
+Read port: 57093
+1664935636999	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\IOTLink\\AppData\\Local\\Temp\\rust_mozprofilelngdq1\\search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://test-noikhu.vimap.vn."
+JavaScript error: https://test-noikhu.vimap.vn/Account/Login, line 1: ReferenceError: WebForm_DoPostBackWithOptions is not defined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://test-noikhu.vimap.vn."
+1664935646920	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1664935650159	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+send@https://test-noikhu.vimap.vn/__bundles/Lepton.Global.695D99D9D450D6F9478DE9E8FAFDE1E8.js?_v=638005288431627661:17:80862
+ajax@https://test-noikhu.vimap.vn/__bundles/Lepton.Global.695D99D9D450D6F9478DE9E8FAFDE1E8.js?_v=638005288431627661:17:78396
+getDefault@https://test-noikhu.vimap.vn/Pages/HTKT/Layer/layer.min.js?v=Oofdc-JOKgnP9z6LVU-0LyM0JwXLtRQAgBl-VW3iLHk:49:16043
+@https://test-noikhu.vimap.vn/HTKT/Layer/Index:1745:20
+a@https://test-noikhu.vimap.vn/__bundles/Lepton.Global.695D99D9D450D6F9478DE9E8FAFDE1E8.js?_v=638005288431627661:17:41288
+Deferred/then/s/</l<@https://test-noikhu.vimap.vn/__bundles/Lepton.Global.695D99D9D450D6F9478DE9E8FAFDE1E8.js?_v=638005288431627661:17:41600
+1664935680814	Marionette	INFO	Stopped listening on port 57093
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]

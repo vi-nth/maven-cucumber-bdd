@@ -1,0 +1,1 @@
+{"uuid":"0eb3e9b7-bbce-4da2-b382-41ad311d4e9b","name":"NoiKhu","children":["cc808fc0-9c0a-40db-a3ce-0fe202b2d7a2"],"befores":[{"name":"initBeforeSuite","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1665399716289,"stop":1665399716311}],"afters":[],"links":[],"start":1665399716228,"stop":1665399787450}

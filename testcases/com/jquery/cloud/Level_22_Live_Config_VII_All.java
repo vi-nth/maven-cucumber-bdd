@@ -28,6 +28,8 @@ public class Level_22_Live_Config_VII_All extends BaseTest {
 			@Optional("4444") String portNumber, @Optional("Windows") String osName, @Optional("10") String osVersion) {
 		driver = getBrowserDriver(envName, severName, browserName, ipAddress, portNumber, osName, osVersion);
 		jQueryHomePage = JQueryPageGeneratorManager.getJQueryHomePage(driver);
+		
+		System.out.printf("Luong:%s - id: %d \n", Thread.currentThread().getName(), Thread.currentThread().getId());
 	}
 
 	@Test

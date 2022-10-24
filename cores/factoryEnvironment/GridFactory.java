@@ -1,5 +1,6 @@
 package factoryEnvironment;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -8,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -16,6 +18,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import commons.GlobalConstants;
+import factoryBrowser.BrowserList;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GridFactory {
@@ -24,7 +27,9 @@ public class GridFactory {
 	private String ipAddress;
 	private String portNumber;
 
-	public GridFactory( String browserName, String ipAddress, String portName) {
+
+
+	public GridFactory(String browserName, String ipAddress, String portNumber) {
 		this.browserName = browserName;
 		this.ipAddress = ipAddress;
 		this.portNumber = portNumber;
@@ -36,11 +41,14 @@ public class GridFactory {
 
 		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
+			File pathBinary = new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+			FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);   
+			FirefoxOptions options = new FirefoxOptions();
+			
 			capability = DesiredCapabilities.firefox();
 			capability.setBrowserName("firefox");
-			capability.setPlatform(Platform.WINDOWS);
-
-			FirefoxOptions options = new FirefoxOptions();
+			capability.setPlatform(Platform.ANY);
+			capability.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options.setBinary(firefoxBinary));
 			options.merge(capability);
 
 		} else if (browserList == BrowserList.HEAD_FIREFOX) {
@@ -52,11 +60,10 @@ public class GridFactory {
 
 		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
 			capability = DesiredCapabilities.chrome();
 			capability.setBrowserName("chrome");
-			capability.setPlatform(Platform.WINDOWS);
-
-			ChromeOptions options = new ChromeOptions();
+			capability.setPlatform(Platform.ANY);
 			options.merge(capability);
 
 		} else if (browserList == BrowserList.HEAD_CHROME) {
@@ -102,8 +109,7 @@ public class GridFactory {
 		}
 
 		try {
-			driver = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portNumber)),
-					capability);
+			driver = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portNumber)),capability);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

@@ -13,6 +13,18 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import commons.GlobalConstants;
+import factoryBrowser.BraveDriverManager;
+import factoryBrowser.BrowserList;
+import factoryBrowser.BrowserNotSupportedException;
+import factoryBrowser.ChromeDriverManager;
+import factoryBrowser.CoccocDriverManager;
+import factoryBrowser.EdgeDriverManager;
+import factoryBrowser.FirefoxDriverManager;
+import factoryBrowser.HeadlessChromeDriverManager;
+import factoryBrowser.HeadlessFirefoxDriverManager;
+import factoryBrowser.IEDriverManager;
+import factoryBrowser.OperaDriverManager;
+import factoryBrowser.SafariDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LocalFactory {
@@ -25,69 +37,50 @@ public class LocalFactory {
 
 	public WebDriver createDriver() {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
-		if (browserList == BrowserList.FIREFOX) {
-			WebDriverManager.firefoxdriver().setup();
-			FirefoxOptions options = new FirefoxOptions();
-			driver = new FirefoxDriver(options);
+		switch (browserList) {
+		case CHROME:
+			driver = new ChromeDriverManager().getBrowserDriver();
+			break;
 
-		} else if (browserList == BrowserList.HEAD_FIREFOX) {
-			WebDriverManager.firefoxdriver().setup();
-			FirefoxOptions options = new FirefoxOptions();
-			options.addArguments("--headless");
-			options.addArguments("window-size=1920x1080)");
-			driver = new FirefoxDriver(options);
+		case FIREFOX:
+			driver = new FirefoxDriverManager().getBrowserDriver();
+			break;
 
-		} else if (browserList == BrowserList.CHROME) {
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.setAcceptInsecureCerts(true);
-			driver = new ChromeDriver(options);
+		case SAFARI:
+			driver = new SafariDriverManager().getBrowserDriver();
+			break;
 
-		} else if (browserList == BrowserList.HEAD_CHROME) {
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
-			options.addArguments("window-size=1920x1080)");
+		case IE:
+			driver = new IEDriverManager().getBrowserDriver();
+			break;
+
+		case EDGE:
+			driver = new EdgeDriverManager().getBrowserDriver();
+			break;
+
+		case HEAD_CHROME:
+			driver = new HeadlessChromeDriverManager().getBrowserDriver();
+			break;
+
+		case HEAD_FIREFOX:
+			driver = new HeadlessFirefoxDriverManager().getBrowserDriver();
+			break;
 			
-			driver = new ChromeDriver(options);
+		case COCCOC:
+			driver = new CoccocDriverManager().getBrowserDriver();
+			break;
+			
+		case BRAVE:
+			driver = new BraveDriverManager().getBrowserDriver();
+			break;
+			
+		case OPERA:
+			driver = new OperaDriverManager().getBrowserDriver();
+			break;
 
-		} else if (browserList == BrowserList.EDGE) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-
-		} else if (browserList == BrowserList.SAFARI) {
-			WebDriverManager.edgedriver().setup();
-			driver = new SafariDriver();
-
-		} else if (browserList == BrowserList.COCCOC) {
-			// Cococ browser trừ đi 5-6 version
-			WebDriverManager.chromedriver().driverVersion("99.0.4844.51").setup();
-			ChromeOptions options = new ChromeOptions();
-			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
-				options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
-			} else {
-				options.setBinary("");
-			}
-			driver = new ChromeDriver(options);
-
-		} else if (browserList == BrowserList.BRAVE) {
-			// Brave browser version nào thì dùng browser vesion đó
-			WebDriverManager.chromedriver().driverVersion("100.0.4896.60").setup();
-			ChromeOptions options = new ChromeOptions();
-			options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
-			driver = new ChromeDriver(options);
-
-		} else if (browserList == BrowserList.OPERA) {
-			// Brave browser version nào thì dùng browser vesion đó
-			WebDriverManager.operadriver().setup();
-			driver = new OperaDriver();
-		} else if (browserList == BrowserList.IE) {
-			WebDriverManager.iedriver().arch32().setup();
-			driver = new InternetExplorerDriver();
-		} else {
-			throw new RuntimeException("Browser name invalid");
+		default:
+			throw new BrowserNotSupportedException(browserName);
 		}
 		return driver;
-
 	}
 }

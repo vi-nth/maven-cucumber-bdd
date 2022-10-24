@@ -36,15 +36,16 @@ public class Demo_01_View_Detail_Project extends BaseTest {
 		
 	}
 	
-	@Test
-	public void Map_01_Hover_On_District_And_Click_On_Detail_List(){
+	//@Test
+	public void Map_01_View_Detail_Object(){
 		log.info("Map - Step 01: Open browser and Public Map");
 		publicMapPage = PageGeneratorManager.getPublicMapPage(driver);
 		
+		log.info("Map - Step 02: Click 1 Invest_Project");
+		publicMapPage.clickOnLayerProject("Dự án trọng điểm thu hút đầu tư", "Lĩnh vực công nghiệp");
 		
-		log.info("Map - Step 02: Hover on District");
-		
-		log.info("Map - Step 03: Verify number of 'Development projects");
+		log.info("Map - Step 03: Click 1 Project in Layer ");
+		publicMapPage.clickInvestProject("Lĩnh vực công nghiệp","Công nghiệp dầu khí");
 		
 		log.info("Map - Step 04: Click on 'Chi tiet' Button");
 		

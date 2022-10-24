@@ -13,8 +13,8 @@
 	<parameter name = "severName" value="NOPCOMMERCEUSER"/>
 
 	
-	<test name="Run on chrome">
-		<parameter name="browser" value="chrome" />
+	<test name="Run on firefox">
+		<parameter name="browser" value="firefox" />
 <!-- 		<package name="com.nopcommerce.user"/> -->
 		<classes>
 <!-- 			<class name="com.nopcommerce.common.Common_01_Register_Cookies" /> -->

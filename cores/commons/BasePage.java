@@ -31,6 +31,7 @@ import pageObjects.wordpress.admin.AdminDashboardPO;
 import pageObjects.wordpress.admin.UserHomePO;
 import pageUIs.jQuery.uploadFile.BasePageJQueryUI;
 import pageUIs.navigation.BasePageUI;
+import pageUIs.noiKhu.ConfiguationPageUI;
 import pageUIs.nopCommerce.user.HomePageUI;
 import pageObjects.navigation.FooterContainerPageObject;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
@@ -207,7 +208,7 @@ public class BasePage {
 		return locatorType;
 	}
 
-	private WebElement getWebElement(WebDriver driver, String locatorType) {
+	public WebElement getWebElement(WebDriver driver, String locatorType) {
 		return driver.findElement(getByLocator(locatorType));
 	}
 
@@ -225,7 +226,15 @@ public class BasePage {
 		
 	}
 	
-
+	public void uploadMultipleFilesConfiguration(WebDriver driver, String... fileNames) {
+		String filePath = GlobalConstants.UPLOAD_FILE_FOLDER;
+		String fullFileName = "";
+		for (String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		getWebElement(driver, ConfiguationPageUI.ICON_FILE).sendKeys(fullFileName);
+	}
 
 	protected void clickToElement(WebDriver driver, String locatorType, String... dynamicValues) {
 		if(driver.toString().contains("internet explorer")) {
@@ -346,6 +355,14 @@ public class BasePage {
 			element.click();
 		}
 	}
+	
+//	protected void checkToCheckboxOrRadioBỵJs(WebDriver driver, String locatorType, String... dynamicValues) {
+//		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+//		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+//		if (!element.isSelected()) {
+//			jsExecutor.executeScript("arguments[0].click();", getWebElement(driver, locatorType));
+//		}
+//	}
 
 	protected void checkToCheckboxOrRadio(WebDriver driver, String locatorType, String... dynamicValues) {
 		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
@@ -625,6 +642,8 @@ public class BasePage {
 		fullFileName = fullFileName.trim();
 		getWebElement(driver, BasePageJQueryUI.UPLOAD_FILE).sendKeys(fullFileName);
 	}
+	
+
 
 	protected void waitForElementClickable(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
