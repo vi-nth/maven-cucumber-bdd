@@ -16,6 +16,14 @@ public class PageGeneratorManager {
 		return new UserRegisterPageObject(driver);
 	}
 
+	public static UserCustomerInforPageObject getUserCustomerInforPage(WebDriver driver) {
+		return new UserCustomerInforPageObject(driver);
+	}
+	
+	public static CommonPageObject getCommanPage(WebDriver driver) {
+		return new CommonPageObject(driver);
+	}
+
 
 
 }
