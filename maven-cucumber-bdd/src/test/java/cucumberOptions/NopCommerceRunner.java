@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		//dryRun = true,
 		glue = "nopCommerce.stepDefinitions", 
 		monochrome = true, 
-		plugin = {"pretty", "html:target/site/cucumber-report-default", "json:target/site/cucumber.json" },
+		plugin = {"pretty", "html:target/site/cucumber-report-default", "json:target/site/cucumber_nopcommerce.json" },
 		snippets = SnippetType.CAMELCASE,
 		tags = {"@register_login"})
 

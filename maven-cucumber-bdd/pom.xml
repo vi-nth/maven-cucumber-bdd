@@ -76,10 +76,17 @@
 			<version>${report.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-		
+
 		<plugins>
 			<!-- Compile code -->
 			<plugin>
@@ -113,7 +120,7 @@
 					<argLine>-Xmx1024m -XX:MaxPermSize=256</argLine>
 					<includes>
 						<testFailureIgnore>true</testFailureIgnore>
-						<include>**/*Runner.java</include>
+						<include>**/*/NopCommerceRunner.java</include>
 					</includes>
 				</configuration>
 

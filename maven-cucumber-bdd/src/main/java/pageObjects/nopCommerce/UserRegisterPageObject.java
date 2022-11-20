@@ -32,11 +32,16 @@ public class UserRegisterPageObject extends BasePage{
 	}
 	
 	
-	public String getEmailText() {
-		waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
-		return getElementText(driver, RegisterPageUI.EMAIL_TEXTBOX);
+	public String getEmailAddress(String emailAddress) {
+		waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX, emailAddress);
+		return getElementAttribute(driver, RegisterPageUI.EMAIL_TEXTBOX, "value", emailAddress);
 	}
-
+	
+	public String getPassword(String password) {
+		waitForElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);
+		return getElementAttribute(driver, RegisterPageUI.PASSWORD_TEXTBOX, "value", password);
+	}
+	
 	
 	public void inputToPasswordTextbox(String password) {
 		waitForElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX);

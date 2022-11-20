@@ -13,14 +13,17 @@ import utilities.DataHelper;
 public class RegisterPageSteps {
 	WebDriver driver;
 	UserRegisterPageObject registerPage;
-	static String userName, password, userNameLogin, passwordLogin;
+	 static String userName, password, userNameLogin, passwordLogin; //Dung bien
+	// static de su dung lai data
+	//TestContext testContext;
 	DataHelper dataTest;
 
-	public RegisterPageSteps() {
+	public RegisterPageSteps(TestContext testContext) {
 		driver = Hooks.openAndQuitBrowser();
+		//this.testContext = testContext;
 		registerPage = PageGeneratorManager.getRegisterPage(driver);
 		dataTest = DataHelper.getDataHelper();
-		
+
 		userName = dataTest.getEmailAddrress();
 		password = dataTest.getPassword();
 	}
@@ -31,13 +34,18 @@ public class RegisterPageSteps {
 		registerPage.inputToFirstNameTextbox(dataTest.getFirstName());
 		registerPage.inputToLastNameTextbox(dataTest.getLastName());
 
-		registerPage.inputToEmailTextbox(userName);
-		userNameLogin = registerPage.getEmailText();
-	
-		registerPage.inputToPasswordTextbox(password);
-		passwordLogin = registerPage.getPasswordTex();
+		registerPage.inputToEmailTextbox(dataTest.getEmailAddrress());
+		//testContext.getDataContext().setContext(Context.userName, registerPage.getEmailText());
+		userNameLogin = registerPage.getEmailAddress("Email"); 
+		System.out.println(userNameLogin);
 	
 
+		registerPage.inputToPasswordTextbox(password);
+		//testContext.getDataContext().setContext(Context.password, registerPage.getPasswordTex());
+		passwordLogin = registerPage.getPassword("Password");
+		System.out.println(passwordLogin);
+
+		//registerPage.inputToConfirmPasswordTextbox(dataTest.getPassword());
 		registerPage.inputToConfirmPasswordTextbox(password);
 
 	}

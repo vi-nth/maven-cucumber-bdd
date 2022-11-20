@@ -15,19 +15,22 @@ public class LoginPageSteps {
 	WebDriver driver;
 	UserLoginPageObject loginPage;
 	DataHelper dataTest;
+	//TestContext testContext;
 
+	public LoginPageSteps(TestContext testContext) {
+		driver = Hooks.openAndQuitBrowser();
+		//this.testContext = testContext;
+		loginPage = PageGeneratorManager.getUserLoginPage(driver);
+		dataTest = DataHelper.getDataHelper();
 
-	public LoginPageSteps() {
-	driver = Hooks.openAndQuitBrowser();
-	loginPage = PageGeneratorManager.getUserLoginPage(driver);
-	dataTest = DataHelper.getDataHelper();
-	
 	}
 
 	@When("^Input valid value to Login form$")
 	public void inputValidValueToLoginForm() {
-		loginPage.inputToEmailTexttbox(RegisterPageSteps.userName);
-		loginPage.inputToPasswordTextbox(RegisterPageSteps.password);
+		loginPage.inputToEmailTexttbox(RegisterPageSteps.userNameLogin);
+		//loginPage.inputToEmailTexttbox(testContext.getDataContext().getContext(Context.userName));
+		loginPage.inputToPasswordTextbox(RegisterPageSteps.passwordLogin);
+		//loginPage.inputToPasswordTextbox(testContext.getDataContext().getContext(Context.password));
 
 	}
 
